@@ -103,7 +103,7 @@ nav ul li a:hover {
   height: auto;
   font-size: 20px;
   background-color: #f8f9fa; 
-  color: #2A2A2A; 
+  color: #2A5159; 
 }
 
 .first-container {
@@ -137,7 +137,7 @@ nav ul li a:hover {
 .right-box h3 {
   text-decoration: underline;
   font-weight: bold;
-  color: #5C8C46;
+  color: #2A5159; 
   font-size: larger;
 }
 
@@ -154,7 +154,7 @@ nav ul li a:hover {
   width: 100vw;
   height: auto;
   background-color: #f8f9fa; 
-  color: #2A2A2A; 
+  color: #2A5159;  
 }
 
 .section2-title {
@@ -164,27 +164,30 @@ nav ul li a:hover {
   font-size: 240%;
   margin-bottom: 25px;
   background-color: #ffffff;
-  color: #0B2559; 
- 
+  color: #2A5159; 
 }
 
 .container-1,
 .container-2,
 .container-3,
-.container-4 {
+.container-4,
+.container-5 {
   width: 90%;
   margin: 20px auto;
-  display: flex;
-  flex-direction: row;
+  font-size: 20px;
   padding: 20px; 
   border: 5px solid #0B2559; 
   border-radius: 10px; 
   background-color: #ffffff; 
 }
 
+.project-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .left-box-pro {
   width: 45%;
-  margin-left: 6%;
   text-align: center;
   line-height: 220%;
   font-weight: normal;
@@ -193,12 +196,18 @@ nav ul li a:hover {
 
 .right-box-pro {
   width: 45%;
-  margin-left: 6%;
   text-align: center;
   line-height: 220%;
   font-weight: normal;
   letter-spacing: 0.8px;
 }
+
+.bottom-box {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
 
 /* Contact section */
 .contact-section {
@@ -228,6 +237,12 @@ nav ul li a:hover {
 .social-media-icon {
   margin: 0 10.5px;
 }
+
+.social-media-icon a:hover img {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
 
 @media screen and (max-width: 600px) {
   header {
