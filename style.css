@@ -5,16 +5,16 @@
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #1a1a1a;
-  color: #ffffff; /* White text color */
+  background-color: #f8f9fa; 
+  color: #333; 
   font-family: "Vesper Libre", serif;
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background-color: #f8f9fa;
+  color: #333;
   font-family: "Vesper Libre", serif;
-  padding: 20px; /* Add padding around the edges */
+  padding: 20px; 
   display: flex;
   justify-content: center;
 }
@@ -23,11 +23,12 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+
 /* Header section */
 header {
   width: 100vw;
   height: auto;
-  background-color: #121212;
+  background-color: #ffffff;
 }
 
 nav {
@@ -42,8 +43,9 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #F6BA1F;
+  color: #5C8C46; 
   font-size: 30px;
+  font-weight: bold;
   margin: 0px 10px;
   letter-spacing: 1px;
 }
@@ -51,9 +53,8 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
   transition: color 0.3s ease;
-  color: #f6ba1f;
+  color: #2A5159;
 }
-
 
 /* Strapline section */
 .strapline-container {
@@ -64,7 +65,7 @@ nav ul li a:hover {
 }
 
 .main-strapline {
-  color: #f6ba1f;
+  color: #2A5159; 
   font-size: 100px;
   text-transform: uppercase;
   margin: 20px 0px;
@@ -72,8 +73,8 @@ nav ul li a:hover {
 }
 
 .second-strapline {
-  color: #ffffff;
-  font-size: 35px;
+  color: #333; 
+  font-size: 55px;
 }
 
 .section1-title {
@@ -82,17 +83,27 @@ nav ul li a:hover {
   text-transform: uppercase;
   font-size: 240%;
   margin-bottom: 25px;
-  background-color: #121212;
-  color: #f6ba1f;
+  background-color: #ffffff;
+  color: #2A5159; 
 }
 
 /* Bio section */
+
+.bio-container {
+  width: 97%; 
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+}
+
 .section-one {
   width: 100vw;
   height: auto;
   font-size: 20px;
-  background-color: #292929; /* Dark bio section background color */
-  color: #ffffff; /* White text color */
+  background-color: #f8f9fa; 
+  color: #2A2A2A; 
 }
 
 .first-container {
@@ -105,8 +116,8 @@ nav ul li a:hover {
 
 .bio {
   text-align: center;
-  font-weight: normal;
-  line-height: 220%;
+  font-weight: 545px;
+  line-height: 200%;
   letter-spacing: 0.4px;
   margin: 20px;
   height: auto;
@@ -116,8 +127,8 @@ nav ul li a:hover {
   width: 31%; 
   margin: 0 1%; 
   text-align: center;
-  font-weight: normal;
-  letter-spacing: 0.8px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
   box-sizing: border-box; 
 }
 
@@ -126,7 +137,7 @@ nav ul li a:hover {
 .right-box h3 {
   text-decoration: underline;
   font-weight: bold;
-  color: #F6BA1F;
+  color: #5C8C46;
   font-size: larger;
 }
 
@@ -142,8 +153,8 @@ nav ul li a:hover {
 .section-two {
   width: 100vw;
   height: auto;
-  background-color: #292929; /* Dark bio section background color */
-  color: #ffffff; /* White text color */
+  background-color: #f8f9fa; 
+  color: #2A2A2A; 
 }
 
 .section2-title {
@@ -152,16 +163,9 @@ nav ul li a:hover {
   text-transform: uppercase;
   font-size: 240%;
   margin-bottom: 25px;
-  background-color: #121212;
-  color: #f6ba1f;
-}
-
-.section2-intro {
-  text-align: center;
-  font-weight: normal;
-  line-height: 120%;
-  letter-spacing: 0.8px;
-  margin: 20px;
+  background-color: #ffffff;
+  color: #0B2559; 
+ 
 }
 
 .container-1,
@@ -173,9 +177,9 @@ nav ul li a:hover {
   display: flex;
   flex-direction: row;
   padding: 20px; 
-  border: 1px solid #f6ba1f;
+  border: 5px solid #0B2559; 
   border-radius: 10px; 
-  background-color: #1a1a1a; 
+  background-color: #ffffff; 
 }
 
 .left-box-pro {
@@ -208,8 +212,8 @@ nav ul li a:hover {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 250%;
-  background-color: #121212;
-  color: #f6ba1f;
+  background-color: #ffffff;
+  color:#5C8C46;
 }
 
 .social-media-div {
@@ -263,4 +267,3 @@ nav ul li a:hover {
       margin: 10px 0;
   }
 }
-
