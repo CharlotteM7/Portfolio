@@ -190,7 +190,7 @@ nav ul li a:hover {
 
 .intro-box{
   width: 100%;
-  line-height: 220%;
+  line-height: 200%;
   font-weight: 400;
   letter-spacing: 0.4px;
   text-align: center;
@@ -200,7 +200,7 @@ nav ul li a:hover {
 .left-box-pro {
   width: 45%;
   text-align: left;
-  line-height: 220%;
+  line-height: 200%;
   font-weight: normal;
   letter-spacing: 0.4px;
 }
@@ -208,7 +208,7 @@ nav ul li a:hover {
 .right-box-pro {
   width: 45%;
   text-align: left;
-  line-height: 220%;
+  line-height: 200%;
   font-weight: normal;
   letter-spacing: 0.4px;
    padding-left: 15px;

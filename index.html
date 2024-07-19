@@ -11,7 +11,6 @@
 <body>
     <div class="container">
         <header>
-        
             <nav>
                 <div class="menu-toggle">
                     <span>&#9776;</span>
@@ -21,11 +20,8 @@
                     <li><a href="#my-projects">My work</a></li>
                     <li><a href="#contact-section">Contact me</a></li>
                     <li><a href="Portfolio/Docs/Charlotte Mackay FT.pdf" target="_blank">CV</a></li>
-
                 </ul>
             </nav>
-            
-
             <div class="strapline-container" data-aos="fade-up">
                 <h1 class="main-strapline">Welcome :)</h1>
                 <h2 class="second-strapline">Charlotte Mackay</h2>
@@ -37,213 +33,202 @@
             <!-- Section One -->
             <section id="about-me" class="section-one" data-aos="fade-up">
                 <h3 class="section1-title">About me</h3>
-                <div class = "bio-container"> 
-                <div class="bio">
-                    <p>
-                        As a First-Class BSc (Hons) Computer Science for Games graduate from the University of Brighton, I am passionate about game development. I thrive on the unique problem-solving challenges that game programming and level design present.
-                    </p>
-                    <p>
-                        With a decade of experience in the automotive finance sector, I have honed my skills in software and system change delivery. As a PRINCE2 certified project manager, I have successfully led teams and managed operations.
-                    </p>
-                    <p>
-                        I am eager to leverage my degree knowledge, project management expertise, and passion for gaming to innovate and excel in game design and development
-                    </p>
-                </div>
+                <div class="bio-container">
+                    <div class="bio">
+                        <p>
+                            As a First-Class BSc (Hons) Computer Science for Games graduate from the University of Brighton, I am passionate about game development. I thrive on the unique problem-solving challenges that game programming and level design present.
+                        </p>
+                        <p>
+                            With a decade of experience in the automotive finance sector, I have honed my skills in software and system change delivery. As a PRINCE2 certified project manager, I have successfully led teams and managed operations.
+                        </p>
+                        <p>
+                            I am eager to leverage my degree knowledge, project management expertise, and passion for gaming to innovate and excel in game design and development.
+                        </p>
+                    </div>
 
-                <div class="first-container">
-                    <div class="left-box">
-                        <h3>Skills</h3>
-                        <ul>
-                            <li>Unreal Engine</li>
-                            <li>Game Design</li>
-                            <li>Game Programming</li>
-                            <li>Visual Studio</li>
-                            <li>Debugging</li>
-                        </ul>
-                    </div>
-                    <div class="middle-box">
-                        <h3>Programming Languages</h3>
-                        <ul>
-                            <li>C++/C#</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>Web Development</li>
-                            <li>GitHub</li>
-                        </ul>
-                    </div>
-                    <div class="right-box">
-                        <h3>Project Management</h3>
-                        <ul>
-                            <li>Prince2 Agile</li>
-                            <li>Problem solving</li>
-                            <li>Team leadership</li>
-                            <li>Communication</li>
-                            <li>Team Work</li>
-
-                        </ul>
+                    <div class="first-container">
+                        <div class="left-box">
+                            <h3>Skills</h3>
+                            <ul>
+                                <li>Unreal Engine</li>
+                                <li>Game Design</li>
+                                <li>Game Programming</li>
+                                <li>Visual Studio</li>
+                                <li>Debugging</li>
+                            </ul>
+                        </div>
+                        <div class="middle-box">
+                            <h3>Programming Languages</h3>
+                            <ul>
+                                <li>C++/C#</li>
+                                <li>Java</li>
+                                <li>JavaScript</li>
+                                <li>Web Development</li>
+                                <li>GitHub</li>
+                            </ul>
+                        </div>
+                        <div class="right-box">
+                            <h3>Project Management</h3>
+                            <ul>
+                                <li>Prince2 Agile</li>
+                                <li>Problem solving</li>
+                                <li>Team leadership</li>
+                                <li>Communication</li>
+                                <li>Team Work</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
             </section>
 
-       <!-- Section Two -->
-<section id="my-projects" class="section-two" data-aos="fade-up">
-    <h3 class="section2-title">My Projects</h3>
+            <!-- Section Two -->
+            <section id="my-projects" class="section-two" data-aos="fade-up">
+                <h3 class="section2-title">My Projects</h3>
 
-<!-- Project 1 -->
-<div class="container-1">
-    <div class ="intro-box">
-    <h3>Project: Runtime Procedurally Generated World</h3> 
-    <h3> PCG | C++ | UE5 </h3>
-    <p> For my final year dissertation, I developed a dynamic system for procedurally generating game worlds at runtime using Unreal Engine 5. This project focuses on creating diverse and engaging terrains using Perlin Noise, a method well-suited for generating smooth, natural-looking landscapes. </p>
+                <!-- Project 1 -->
+                <div class="container-1">
+                    <div class="intro-box">
+                        <h3>Project: Runtime Procedurally Generated World</h3> 
+                        <h3> PCG | C++ | UE5 </h3>
+                        <p> For my final year dissertation, I developed a dynamic system for procedurally generating game worlds at runtime using Unreal Engine 5. This project focuses on creating diverse and engaging terrains using Perlin Noise, a method well-suited for generating smooth, natural-looking landscapes. </p>
+                        <br>
+                    </div>
+                    <div class="project-content">
+                        <div class="left-box-pro" data-aos="fade-right">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li><strong>Terrain Generation:</strong> Implemented a procedural mesh system to generate terrains dynamically, ensuring unique landscapes for each playthrough.</li>
+                                <li><strong>Level of Detail (LOD):</strong> Developed a tile-based LOD system to optimise performance, rendering high-detail tiles close to the player and lower detail tiles further away.</li>
+                                <li><strong>Foliage and Environmental Assets:</strong> Integrated a system for dynamic foliage placement, ensuring that trees and plants are distributed naturally based on terrain features.</li>
+                                <li><strong>Performance Optimisation:</strong> Improved the game’s performance by managing terrain and asset generation asynchronously, maintaining smooth gameplay.</li>
+                                <li><strong>Player Interaction:</strong> Created a dynamic spawning system to ensure players always start in navigable areas, enhancing gameplay experience.</li>
+                            </ul>
+                        </div>
+                        <div class="right-box-pro" data-aos="fade-left">
+                            <h4>Challenges and Solutions:</h4>
+                            <ul>
+                                <li>Overcame performance bottlenecks by implementing an efficient LOD system and asynchronous processing.</li>
+                                <li>Ensured the terrain generation was visually compelling and topographically diverse through advanced procedural techniques.</li>
+                                <li>Integrated foliage and environmental assets dynamically to maintain an immersive and realistic game world.</li>
+                            </ul>
+                            <h4>Outcome:</h4>
+                            <p>This project successfully demonstrates the potential of procedural content generation to create rich, engaging, and performance-optimised game environments. It highlights the efficiency of using procedural techniques to manage large game worlds, ensuring unique and varied player experiences.</p>
+                            <a href="https://github.com/CharlotteM7/CI601Project" target="_blank">GitHub repo</a> |
+                            <a href="https://drive.google.com/file/d/1sfrMn-lDjhmAu4XOi3RuC-xFOFLyRIid/view?usp=sharing" target="_blank">Assignment Report</a>
+                        </div>
+                    </div>
+                    <div class="bottom-box">
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/6OUKWoppJMU" frameborder="0"></iframe>
+                    </div>
+                </div>
+  
+  
+  
 
-</div>
+ <!-- Project 2 -->
+<div class="container-2">
+    <div class="intro-box">
+        <h3>Project: Infinite Map Procedural Terrain Generator</h3>
+        <h3>Game Engine Development | C++ | Perlin Noise</h3>
+        <p>For this project, I developed a game engine subsystem that generates infinite procedural terrain using Perlin Noise. This was implemented within a C++ codebase, focusing on creating an efficient and visually appealing terrain generation system.</p>
+        <br>
+    </div>
     <div class="project-content">
-      <div class="left-box-pro" data-aos="fade-right">
-    
-       
-        <h4>Key Features:</h4>
-        <ul>
-          <li><strong>Terrain Generation:</strong> Implemented a procedural mesh system to generate terrains dynamically, ensuring unique landscapes for each playthrough</li>
-          <li><strong>Level of Detail (LOD):</strong> Developed a tile-based LOD system to optimize performance, rendering high-detail tiles close to the player and lower detail tiles further away.</li>
-          <li><strong>Foliage and Environmental Assets:</strong> Integrated a system for dynamic foliage placement, ensuring that trees and plants are distributed naturally based on terrain features.</li>
-          <li><strong>Performance Optimisation:</strong> Improved the game’s performance by managing terrain and asset generation asynchronously, maintaining smooth gameplay.</li>
-          <li><strong>Player Interaction:</strong> Created a dynamic spawning system to ensure players always start in navigable areas, enhancing gameplay experience.</li>
-        </ul>
-      </div>
-      <div class="right-box-pro" data-aos="fade-left">
-        
-        <h4>Challenges and Solutions:</h4>
-        <ul>
-          <li>Overcame performance bottlenecks by implementing an efficient LOD system and asynchronous processing.</li>
-          <li>Ensured the terrain generation was visually compelling and topographically diverse through advanced procedural techniques.</li>
-          <li>Integrated foliage and environmental assets dynamically to maintain an immersive and realistic game world</li>
-        </ul>
-        <h4>Outcome:</h4>
-        <p>This project successfully demonstrates the potential of procedural content generation to create rich, engaging, and performance-optimised game environments. It highlights the efficiency of using procedural techniques to manage large game worlds, ensuring unique and varied player experiences.</p>
-        <a href="https://github.com/CharlotteM7/CI601Project" target="_blank">GitHub repo</a> |
-        <a href="https://drive.google.com/file/d/1sfrMn-lDjhmAu4XOi3RuC-xFOFLyRIid/view?usp=sharing" target="_blank">Assignment Report</a>  
-    </div>
-      
-    </div>
-    <div class="bottom-box">
-      <iframe width="600" height="350" src="https://www.youtube.com/embed/6OUKWoppJMU" frameborder="0"></iframe>
-    </div>
-  </div>
-  
-  
-  
-
-    <!-- Project 2 -->
-    <div class="container-2">
-        <div class ="intro-box">
-            <h3>Project: Infinite Map Procedural Terrain Generator</h3>
-            <h3> Game Engine Development | C++ | Perlin Noise</h3>
-            <p>For this project, I developed a game engine subsystem that generates infinite procedural terrain using Perlin Noise. This was implemented within a C++ codebase, focusing on creating an efficient and visually appealing terrain generation system.</p>
-
-        </div>
-        <div class="project-content">
         <div class="left-box-pro" data-aos="fade-right">
-            <p>
-                
-           
-            </p>
-            
             <h4>Key Features:</h4>
             <ul>
-                <li><strong>Infinite Terrain Generation: </strong>Utilised a chunk-based system to generate an endless map, ensuring new terrain is procedurally created as the player moves.</li>
-                <li><strong>Perlin Noise Algorithm: </strong>Implemented Perlin Noise for realistic terrain, balancing simplicity and performance.</li>
-                <li><strong>Performance Optimisation:</strong>Performance Optimisation: Enhanced rendering performance by optimising the terrain drawing process, reducing memory usage and ensuring smooth gameplay.</li>
+                <li><strong>Infinite Terrain Generation:</strong> Utilised a chunk-based system to generate an endless map, ensuring new terrain is procedurally created as the player moves.</li>
+                <li><strong>Perlin Noise Algorithm:</strong> Implemented Perlin Noise for realistic terrain, balancing simplicity and performance.</li>
+                <li><strong>Performance Optimisation:</strong> Enhanced rendering performance by optimising the terrain drawing process, reducing memory usage and ensuring smooth gameplay.</li>
                 <li><strong>Dynamic Textures:</strong> Applied various textures based on terrain height to differentiate between land and water, improving visual appeal.</li>
             </ul>
         </div>
         <div class="right-box-pro" data-aos="fade-left">
             <h4>Challenges and Solutions:</h4>
             <ul>
-                <li>Memory Management: Addressed high memory usage by implementing an efficient Level of Detail (LOD) system and optimizing the terrain rendering process.</li>
-                <li>Visual Quality: Improved the visual quality of the terrain by incorporating textures and optimizing the Perlin Noise algorithm.</li>
+                <li><strong>Memory Management:</strong> Addressed high memory usage by implementing an efficient Level of Detail (LOD) system and optimising the terrain rendering process.</li>
+                <li><strong>Visual Quality:</strong> Improved the visual quality of the terrain by incorporating textures and optimising the Perlin Noise algorithm.</li>
             </ul>
             <h4>Outcome:</h4>
-            <p>This project showcases the ability to generate an infinite, procedurally created terrain in real-time. It highlights my skills in game engine development, procedural content generation, and performance optimization.</p>
+            <p>This project showcases the ability to generate an infinite, procedurally created terrain in real-time. It highlights my skills in game engine development, procedural content generation, and performance optimisation.</p>
             <a href="https://github.com/CharlotteM7/xcube2d" target="_blank">GitHub repo</a> |
             <a href="https://drive.google.com/file/d/1u06vtkEo_khp6cDXHvFQEvv1bRonotUG/view?usp=sharing" target="_blank">Assignment Report</a>
-        
         </div>
     </div>
-        <div class="bottom-box">
-            <iframe width="600" height="350" src="https://www.youtube.com/embed/BHuCU1LuryE" frameborder="0"></iframe>
-        </div>
+    <div class="bottom-box">
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/BHuCU1LuryE" frameborder="0"></iframe>
     </div>
+</div>
 
-    <!-- Project 3 -->
-    <div class="container-3">
-        <div class="project-content"> 
+<!-- Project 3 -->
+<div class="container-3">
+    <div class="intro-box">
+        <h3>Project: Multiplayer Pong Game</h3>
+        <h3>SDL | C++ | Java-based Multiplayer Server</h3>
+        <p>For this project, I developed a multiplayer version of the classic Pong game, incorporating modern enhancements and additional features to create a more engaging experience. The development process involved both server-side and client-side programming, focusing on real-time gameplay and network communication.</p>
+        <br>
+    </div>
+    <div class="project-content">
         <div class="left-box-pro" data-aos="fade-right">
-            <p>
-                <strong>Project: Multiplayer Pong Game</strong><br>
-                <a href="https://github.com/CharlotteM7/CI628-PongServer" target="_blank">GitHub repo (Server)</a> |
-                <a href="https://github.com/CharlotteM7/CI628-PongClient" target="_blank">GitHub repo (Client)</a> |
-                <a href="https://drive.google.com/file/d/1BvhQ97H-ox_Acc9f7-4bfC9JtXVd5Opy/view?usp=sharing" target="_blank">Assignment Report</a>
-            </p>
-            <p> SDL | C++ | Java-based Multiplayer Server</p>
-            <p>For this project, I developed a multiplayer version of the classic Pong game, incorporating modern enhancements and additional features to create a more engaging experience. The development process involved both server-side and client-side programming, focusing on real-time gameplay and network communication.</p>
             <h4>Key Features:</h4>
             <ul>
-                <li>Three-Player Mode: Expanded the classic Pong game to include a third player, adding a new dimension and strategic complexity to the gameplay.</li>
-                <li>Power-Up Mechanics: Introduced power-ups that alter the game's dynamics, such as slowing down the ball, which adds a strategic element to gameplay.</li>
-                <li>Particle System: Implemented a basic particle system to enhance visual effects, adding a retro arcade feel to the game.</li>
-                <li>Interactive Menu: Developed an interactive menu system for game settings and navigation, improving the user experience.</li>
-                <li>Networking and Synchronization: Utilized TCP/IP for real-time data transmission, ensuring smooth and synchronized gameplay across multiple clients.</li>
+                <li><strong>Three-Player Mode:</strong> Expanded the classic Pong game to include a third player, adding a new dimension and strategic complexity to the gameplay.</li>
+                <li><strong>Power-Up Mechanics:</strong> Introduced power-ups that alter the game's dynamics, such as slowing down the ball, which adds a strategic element to gameplay.</li>
+                <li><strong>Particle System:</strong> Implemented a basic particle system to enhance visual effects, adding a retro arcade feel to the game.</li>
+                <li><strong>Interactive Menu:</strong> Developed an interactive menu system for game settings and navigation, improving the user experience.</li>
+                <li><strong>Networking and Synchronisation:</strong> Utilised TCP/IP for real-time data transmission, ensuring smooth and synchronised gameplay across multiple clients.</li>
             </ul>
         </div>
         <div class="right-box-pro" data-aos="fade-left">
             <h4>Challenges and Solutions:</h4>
             <ul>
-                <li>Latency Management: Implemented client-side prediction and data normalization to minimize latency and ensure responsive gameplay.</li>
-                <li>Error Handling: Developed robust error handling mechanisms to manage network-related issues and maintain game stability.</li>
-                <li>Scalability: Designed the architecture to handle multiple clients efficiently, with considerations for future expansions and additional features.</li>
+                <li><strong>Latency Management:</strong> Implemented client-side prediction and data normalisation to minimise latency and ensure responsive gameplay.</li>
+                <li><strong>Error Handling:</strong> Developed robust error handling mechanisms to manage network-related issues and maintain game stability.</li>
+                <li><strong>Scalability:</strong> Designed the architecture to handle multiple clients efficiently, with considerations for future expansions and additional features.</li>
             </ul>
             <h4>Outcome:</h4>
-            <p>This project demonstrates my ability to develop and enhance classic games with modern features, focusing on real-time multiplayer capabilities. It showcases skills in game design, network programming, and performance optimization.</p>
+            <p>This project demonstrates my ability to develop and enhance classic games with modern features, focusing on real-time multiplayer capabilities. It showcases skills in game design, network programming, and performance optimisation.</p>
+            <a href="https://github.com/CharlotteM7/CI628-PongServer" target="_blank">GitHub repo (Server)</a> |
+            <a href="https://github.com/CharlotteM7/CI628-PongClient" target="_blank">GitHub repo (Client)</a> |
+            <a href="https://drive.google.com/file/d/1BvhQ97H-ox_Acc9f7-4bfC9JtXVd5Opy/view?usp=sharing" target="_blank">Assignment Report</a>
         </div>
     </div>
-        <div class="bottom-box">
-            <iframe width="600" height="350" src="https://www.youtube.com/embed/vxd78EsPqck" frameborder="0"></iframe>
-        </div>
+    <div class="bottom-box">
+        <iframe width="600" height="350" src="https://www.youtube.com/embed/vxd78EsPqck" frameborder="0"></iframe>
     </div>
-                      
-
+</div>
 
 <!-- Project 4 -->
 <div class="container-4">
-    <div class="project-content"> 
-    <div class="left-box-pro" data-aos="fade-right">
-        <p>
-            <strong>Project: UE5 Puzzle-Solving Shooter Action Game</strong><br>
-            <a href="https://drive.google.com/file/d/11Hs2zcEDq3pt4_otLtUZRnBJic-jwfBR/view?usp=sharing" target="_blank">Assignment Report</a>
-        </p>
-        <p>UE5 | Blueprints | Game Design | AI Behaviour Trees | Animation Blend Spaces</p>
+    <div class="intro-box">
+        <h3>Project: UE5 Puzzle-Solving Shooter Action Game</h3>
+        <h3>UE5 | Blueprints | Game Design | AI Behaviour Trees | Animation Blend Spaces</h3>
         <p>For this project, I developed a prototype of a puzzle-solving shooter action game using Unreal Engine 5. This project allowed me to explore and integrate various game development techniques and systems, providing a comprehensive learning experience.</p>
-        <h4>Key Features:</h4>
-        <ul>
-            <li>Complex Character Animations: Implemented animation blend spaces and state machines to ensure smooth and realistic character movements, including walking, crouching, and jumping.</li>
-            <li>Combat System: Developed a shooting mechanism that includes ammo management, reloading functionality, and realistic projectile behavior.</li>
-            <li>Health and Healing System: Integrated a health system that allows the player to pick up health items to heal, enhancing gameplay dynamics.</li>
-            <li>AI Enemy Behaviour: Designed AI behavior using behavior trees and blackboards, enabling enemies to patrol, detect the player, and engage in combat.</li>
-            <li>Environmental Interaction: Created interactive elements like switches and gates, which players use to solve puzzles and progress through the game.</li>
-            <li>User Interface: Developed a HUD to display player health, ammo count, and other essential game information.</li>
-        </ul>
+        <br>
     </div>
-    <div class="right-box-pro" data-aos="fade-left">
-        <h4>Challenges and Solutions:</h4>
-        <ul>
-            <li>AI Optimization: Improved AI detection and behavior by fine-tuning the perception system and behavior trees.</li>
-            <li>Animation Synchronization: Ensured smooth transitions between different animations by meticulously setting up blend spaces and state machines.</li>
-        </ul>
-        <h4>Outcome:</h4>
-        <p>This project demonstrates the integration of various gameplay mechanics and systems, showcasing my ability to design and develop engaging and interactive game experiences using Unreal Engine 5.</p>
+    <div class="project-content">
+        <div class="left-box-pro" data-aos="fade-right">
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Complex Character Animations:</strong> Implemented animation blend spaces and state machines to ensure smooth and realistic character movements, including walking, crouching, and jumping.</li>
+                <li><strong>Combat System:</strong> Developed a shooting mechanism that includes ammo management, reloading functionality, and realistic projectile behaviour.</li>
+                <li><strong>Health and Healing System:</strong> Integrated a health system that allows the player to pick up health items to heal, enhancing gameplay dynamics.</li>
+                <li><strong>AI Enemy Behaviour:</strong> Designed AI behaviour using behaviour trees and blackboards, enabling enemies to patrol, detect the player, and engage in combat.</li>
+                <li><strong>Environmental Interaction:</strong> Created interactive elements like switches and gates, which players use to solve puzzles and progress through the game.</li>
+                <li><strong>User Interface:</strong> Developed a HUD to display player health, ammo count, and other essential game information.</li>
+            </ul>
+        </div>
+        <div class="right-box-pro" data-aos="fade-left">
+            <h4>Challenges and Solutions:</h4>
+            <ul>
+                <li><strong>AI Optimisation:</strong> Improved AI detection and behaviour by fine-tuning the perception system and behaviour trees.</li>
+                <li><strong>Animation Synchronisation:</strong> Ensured smooth transitions between different animations by meticulously setting up blend spaces and state machines.</li>
+            </ul>
+            <h4>Outcome:</h4>
+            <p>This project demonstrates the integration of various gameplay mechanics and systems, showcasing my ability to design and develop engaging and interactive game experiences using Unreal Engine 5.</p>
+            <a href="https://drive.google.com/file/d/11Hs2zcEDq3pt4_otLtUZRnBJic-jwfBR/view?usp=sharing" target="_blank">Assignment Report</a>
+        </div>
     </div>
-</div>
     <div class="bottom-box">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/iPR5E-m3djA" frameborder="0"></iframe>
     </div>
@@ -251,33 +236,34 @@
 
 <!-- Project 5 -->
 <div class="container-5">
-    <div class="project-content"> 
-    <div class="left-box-pro" data-aos="fade-right">
-        <p>
-            <strong>Project: Web-Based Dungeon Crawler Game</strong><br>
+    <div class="intro-box">
+        <h3>Project: Web-Based Dungeon Crawler Game</h3>        
+        <h3>Phaser 3 | JavaScript | Web Development</h3>
+        <p>For this project, I developed a web-based dungeon crawler game using the Phaser 3 framework. The game involves navigating through a dungeon, collecting keys, and avoiding hazards to escape.</p>
+        <br> 
+    </div>
+    <div class="project-content">
+        <div class="left-box-pro" data-aos="fade-right">
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Interactive Gameplay:</strong> Designed engaging gameplay mechanics, including key collection and trap evasion.</li>
+                <li><strong>Responsive Controls:</strong> Developed smooth and responsive player controls to enhance the gaming experience.</li>
+                <li><strong>Dynamic Enemies:</strong> Implemented enemy characters with simple AI behaviours, providing a challenging environment for players.</li>
+                <li><strong>Sound Integration:</strong> Added sound effects to enhance the immersive experience, providing audio feedback for player actions.</li>
+            </ul>
+        </div>
+        <div class="right-box-pro" data-aos="fade-left">
+            <h4>Challenges and Solutions:</h4>
+            <ul>
+                <li><strong>Enemy and Trap Integration:</strong> Balanced the difficulty by adjusting enemy behaviours and trap placements, ensuring a challenging yet fair gameplay experience.</li>
+                <li><strong>Player Feedback:</strong> Incorporated sound effects for collecting items and encountering hazards to provide immediate feedback and enhance immersion.</li>
+            </ul>
+            <h4>Outcome:</h4>
+            <p>This project demonstrates the ability to create an engaging and interactive web-based game using JavaScript and Phaser 3. It showcases skills in game design, programming, and user experience enhancement.</p>
             <a href="https://github.com/CharlotteM7/CI587-PhaserGame" target="_blank">GitHub repo</a> |
             <a href="https://drive.google.com/file/d/1MnGsq_l9KRzV92pOFVi-_bRwuqJ6jhH3/view?usp=sharing" target="_blank">Assignment Report</a>
-        </p>
-        <p> Phaser 3 | JavaScript | Web Development</p>
-        <p>For this project, I developed a web-based dungeon crawler game using the Phaser 3 framework. The game involves navigating through a dungeon, collecting keys, and avoiding hazards to escape.</p>
-        <h4>Key Features:</h4>
-        <ul>
-            <li>Interactive Gameplay: Designed engaging gameplay mechanics, including key collection and trap evasion.</li>
-            <li>Responsive Controls: Developed smooth and responsive player controls to enhance the gaming experience.</li>
-            <li>Dynamic Enemies: Implemented enemy characters with simple AI behaviors, providing a challenging environment for players.</li>
-            <li>Sound Integration: Added sound effects to enhance the immersive experience, providing audio feedback for player actions.</li>
-        </ul>
+        </div>
     </div>
-    <div class="right-box-pro" data-aos="fade-left">
-        <h4>Challenges and Solutions:</h4>
-        <ul>
-            <li>Enemy and Trap Integration: Balanced the difficulty by adjusting enemy behaviors and trap placements, ensuring a challenging yet fair gameplay experience.</li>
-            <li>Player Feedback: Incorporated sound effects for collecting items and encountering hazards to provide immediate feedback and enhance immersion.</li>
-        </ul>
-        <h4>Outcome:</h4>
-        <p>This project demonstrates the ability to create an engaging and interactive web-based game using JavaScript and Phaser 3. It showcases skills in game design, programming, and user experience enhancement.</p>
-    </div>
-</div>
     <div class="bottom-box">
         <iframe width="600" height="350" src="https://www.youtube.com/embed/gT_P-MYPPyo" frameborder="0"></iframe>
     </div>
