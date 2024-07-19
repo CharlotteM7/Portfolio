@@ -266,41 +266,34 @@ h4{
 }
 
 
-@media screen and (max-width: 600px) {
-  header {
-      height: 40vh;
-  }
-  
-  h1 {
-      display: none;
-  }
-}
 
-@media screen and (max-width: 950px) {   
-  h3.second-strapline {
-      display: none;
+/* Media Queries */
+@media screen and (min-width: 769px) {
+  .left-box-pro,
+  .right-box-pro {
+    width: 45%;
   }
 }
 
 @media screen and (max-width: 768px) {
   nav ul {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
   nav ul.active {
-      display: flex;
+    display: flex;
   }
   .menu-toggle {
-      display: block;
+    display: block;
   }
-  .container-1, .container-2, .container-3, .container-4 {
-      flex-direction: column;
-      align-items: center;
+  .project-content {
+    flex-direction: column;
   }
-  .left-box-pro, .right-box-pro {
-      width: 100%;
-      margin: 10px 0;
+  .left-box-pro,
+  .right-box-pro {
+    width: 100%;
+    margin: 10px 0;
   }
 }
