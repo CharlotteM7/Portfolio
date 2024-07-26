@@ -13,10 +13,7 @@
 
 
 
-        // Toggle Menu for Mobile Devices
-        document.querySelector('.menu-toggle').addEventListener('click', () => {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
+
 
         // Initialize AOS
         AOS.init();

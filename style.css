@@ -7,13 +7,13 @@
   scroll-behavior: smooth;
   background-color: #f8f9fa; 
   color: #333; 
-  font-family: "Vesper Libre", serif;
+  font-family: 'Roboto', sans-serif; 
 }
 
 body {
   background-color: #f8f9fa;
   color: #333;
-  font-family: "Vesper Libre", serif;
+  font-family: 'Roboto', sans-serif; 
   padding: 20px; 
   display: flex;
   justify-content: center;
@@ -43,7 +43,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #5C8C46; 
+  color: #2A5159;   
   font-size: 30px;
   font-weight: bold;
   margin: 0px 10px;
@@ -73,8 +73,8 @@ nav ul li a:hover {
 }
 
 .second-strapline {
-  color: #333; 
-  font-size: 55px;
+  color: #2A5159; 
+  font-size: 45px;
 }
 
 .section1-title {
@@ -82,7 +82,7 @@ nav ul li a:hover {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-size: 240%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   background-color: #ffffff;
   color: #2A5159; 
 }
@@ -91,7 +91,7 @@ nav ul li a:hover {
 
 .bio-container {
   width: 97%; 
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 20px;
   background-color: #ffffff; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
@@ -115,20 +115,19 @@ nav ul li a:hover {
 }
 
 .bio {
-  text-align: center;
+  text-align: auto;
   font-weight: 545px;
-  line-height: 200%;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   margin: 20px;
   height: auto;
 }
 
 .left-box, .middle-box, .right-box {
-  width: 31%; 
-  margin: 0 1%; 
+  width: 33.33%; 
+  margin: 0.1%; 
   text-align: center;
   font-weight: 500;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   box-sizing: border-box; 
 }
 
@@ -190,7 +189,7 @@ nav ul li a:hover {
 
 .intro-box{
   width: 100%;
-  line-height: 200%;
+
   font-weight: 400;
   letter-spacing: 0.4px;
   text-align: center;
@@ -200,7 +199,7 @@ nav ul li a:hover {
 .left-box-pro {
   width: 45%;
   text-align: left;
-  line-height: 200%;
+ 
   font-weight: normal;
   letter-spacing: 0.4px;
 }
@@ -208,7 +207,7 @@ nav ul li a:hover {
 .right-box-pro {
   width: 45%;
   text-align: left;
-  line-height: 200%;
+ 
   font-weight: normal;
   letter-spacing: 0.4px;
    padding-left: 15px;
@@ -221,12 +220,12 @@ nav ul li a:hover {
 
 h3{
   text-align: center;
-  color:#5C8C46;
+  color: #2A5159;  
 }
 
 h4{
   text-align: left;
-  color:#5C8C46;
+  color: #2A5159;  
   text-decoration: underline;
 }
 
@@ -244,7 +243,7 @@ h4{
   text-transform: uppercase;
   font-size: 250%;
   background-color: #ffffff;
-  color:#5C8C46;
+  color: #2A5159;  
 }
 
 .social-media-div {
