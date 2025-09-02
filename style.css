@@ -242,3 +242,44 @@ a:focus{ outline: 3px solid var(--ring); outline-offset: 3px; border-radius: 8px
   .first-container{ grid-template-columns: 1fr; }
   .strapline-container{ padding: 18px; }
 }
+/* Make sure content isn't hidden under a fixed/top nav */
+html { scroll-padding-top: 72px; }   
+
+/* Burger button is hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Mobile menu */
+@media (max-width: 840px){
+  /* show burger */
+  .menu-toggle { display: inline-block; margin-left: auto; }
+
+  /* turn UL into a dropdown */
+  nav {
+    position: relative;              /* anchor the dropdown */
+    z-index: 100;                    /* sit above page content */
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    display: none;                   /* hidden by default */
+    flex-direction: column;
+    gap: 8px;
+    min-width: 220px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  }
+  nav ul.active { display: flex; }   /* shown when toggled */
+  nav ul li a { padding: 8px 10px; }
+}
