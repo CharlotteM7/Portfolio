@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlotte Mackay - Game Developer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -21,15 +23,50 @@
                     <li><a href="#about-me">About me</a></li>
                     <li><a href="#my-projects">My work</a></li>
                     <li><a href="#contact-section">Contact me</a></li>
-                    <li><a href="Portfolio/Docs/CharlotteMackayCV2025.pdf" target="_blank">CV</a></li>
+                    <li><a href="CharlotteMackayCVGame.pdf" download="">CV</a></li>
                 </ul>
             </nav>
-            <div class="strapline-container" data-aos="fade-up">
-                <h1 class="main-strapline">Welcome :)</h1>
-                <h2 class="second-strapline">Charlotte Mackay</h2>
-                <h2 class="second-strapline">Game Designer & Developer</h2>
-                <br>
+            <div class="hero" data-aos="fade-up">
+                <div class="hero-aura"></div>
+
+                <div class="hero-text">
+                    <p class="hero-kicker">Game design · Systems · Prototyping</p>
+                    <h1 class="hero-title">
+                        Charlotte<br>Mackay
+                    </h1>
+                    <p class="hero-subtitle">
+                        Game designer & developer focused on systemic design, puzzle-driven experiences,
+                        and tools that let players discover their own stories.
+                    </p>
+
+                    <div class="hero-meta">
+                        <span>MSc Computer Science</span>
+                        <span>Based in the UK</span>
+                        <span>Open to remote graduate & junior roles</span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#my-projects" class="btn">View selected work</a>
+                        <a href="#contact-section" class="hero-link">Contact</a>
+                    </div>
+                </div>
+
+                <div class="hero-side">
+                    <div class="hero-pill">
+                        <span class="hero-pill-label">Focus</span>
+                        <span class="hero-pill-value">Game & Systems Design</span>
+                    </div>
+                    <div class="hero-pill">
+                        <span class="hero-pill-label">Engines</span>
+                        <span class="hero-pill-value">UE5 · Unity · Phaser</span>
+                    </div>
+                    <div class="hero-pill">
+                        <span class="hero-pill-label">Recent work</span>
+                        <span class="hero-pill-value">Educational cryptography game</span>
+                    </div>
+                </div>
             </div>
+
         </header>
 
         <main>
@@ -46,7 +83,8 @@
                             stories we share.
                         </p>
                         <p>
-                            My passion is taking an idea, whether it’s a system, a space, or a narrative hook and turning
+                            My passion is taking an idea, whether it’s a system, a space, or a narrative hook and
+                            turning
                             it into something
                             players can feel. I thrive on experimenting, prototyping, and iterating until the gameplay
                             clicks and sparks that
@@ -99,39 +137,74 @@
             <!-- Section Two -->
             <section id="my-projects" class="section-two" data-aos="fade-up">
 
-
-                <!-- Project 1 -->
+                <!-- Project 1: MSc Cryptography Game -->
                 <div class="container-1">
                     <div class="intro-box">
-                        <h3>Project: Runtime Procedural World (BSc Dissertation)</h3>
-                        <h3> PCG | C++ | UE5 </h3>
-                        <h3>Role: Solo project — designed, implemented, tested all systems.</h3>
-                        <p> Built a procedural world generation system in Unreal Engine 5 (C++/Blueprints) for my
-                            final-year dissertation, focused on runtime terrain creation. </p>
-                        
+                        <h3>Project: Educational Cryptography Puzzle Game (MSc Dissertation)</h3>
+                        <h3>UE5 | C++ | Blueprints | Systems & Puzzle Design</h3>
+                        <h3>Role: Solo project — systems, puzzle design, and implementation.</h3>
+                        <p>
+                            A third-person educational puzzle game that teaches core cryptography concepts through
+                            clue-based
+                            progression and interactive puzzles.
+                        </p>
                     </div>
                     <div class="project-content">
                         <div class="left-box-pro" data-aos="fade-right">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>Procedural terrain mesh using Perlin Noise for varied, natural landscapes</li>
-                                <li>Tile-based Level of Detail (LOD) system for async streaming</li>
-                                <li>Dynamic foliage placement driven by terrain rules for natural biomes</li>
-                                <li>Spawn system ensuring players start in safe, navigable areas</li>
+                                <li>Modular puzzle systems (substitution, pattern matching, decoding).</li>
+                                <li>Quest and interaction systems built in C++ and Blueprints.</li>
+                                <li>Data-driven puzzle logic so content can be tuned or extended without code changes.
+                                </li>
+                                <li>UI feedback, hint systems, and basic accessibility adjustments.</li>
+                            </ul>
+                        </div>
+                        <div class="right-box-pro" data-aos="fade-left">
+                            <h4>Design Challenges & Solutions:</h4>
+                            <ul>
+                                <li>Balanced learning vs. frustration by iterating on puzzle difficulty curves.</li>
+                                <li>Ensured puzzles teach real concepts (e.g. substitution ciphers) rather than feeling
+                                    arbitrary.</li>
+                                <li>Separated puzzle data from logic to make design iteration faster and safer.</li>
+                            </ul>
+                            <!-- Add GitHub / video links here when you’re ready -->
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project 2: Runtime Procedural World (BSc) -->
+                <div class="container-2">
+                    <div class="intro-box">
+                        <h3>Project: Runtime Procedural World (BSc Dissertation)</h3>
+                        <h3>PCG | C++ | UE5</h3>
+                        <h3>Role: Solo project — designed, implemented, tested all systems.</h3>
+                        <p>
+                            Procedural world generation system in Unreal Engine 5 (C++/Blueprints), focused on runtime
+                            terrain
+                            creation and streaming.
+                        </p>
+                    </div>
+                    <div class="project-content">
+                        <div class="left-box-pro" data-aos="fade-right">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Procedural terrain meshes using Perlin Noise for varied, natural landscapes.</li>
+                                <li>Tile-based Level of Detail (LOD) system for asynchronous world streaming.</li>
+                                <li>Dynamic foliage placement driven by terrain rules for natural biomes.</li>
+                                <li>Spawn system ensuring players start in safe, navigable areas.</li>
                             </ul>
                         </div>
                         <div class="right-box-pro" data-aos="fade-left">
                             <h4>Challenges and Solutions:</h4>
                             <ul>
-                                <li>Overcame performance bottlenecks by implementing an efficient LOD system and
-                                    asynchronous processing.</li>
-                                <li>Ensured the terrain generation was visually compelling and topographically diverse
-                                    through advanced procedural techniques.</li>
-                                <li>Integrated foliage and environmental assets dynamically to maintain an immersive and
-                                    realistic game world.</li>
+                                <li>Reduced hitches by pushing work into async tasks and carefully managing LOD
+                                    transitions.</li>
+                                <li>Used biome rules to keep terrain visually interesting instead of random noise
+                                    “blobs”.</li>
+                                <li>Integrated foliage and environment assets dynamically to keep the world feeling
+                                    cohesive.</li>
                             </ul>
-                        
                             <a href="https://github.com/CharlotteM7/CI601Project" target="_blank">GitHub repo</a> |
                             <a href="https://drive.google.com/file/d/1sfrMn-lDjhmAu4XOi3RuC-xFOFLyRIid/view?usp=sharing"
                                 target="_blank">Assignment Report</a>
@@ -143,79 +216,151 @@
                     </div>
                 </div>
 
-
-
-
-                <!-- Project 2 -->
-                <div class="container-2">
+                <!-- Project 3: UE5 Puzzle-Solving Shooter -->
+                <div class="container-3">
                     <div class="intro-box">
-                        <h3>Project: Infinite Map Procedural Terrain Generator</h3>
-
-                        <h3>Game Engine Development | C++ | Perlin Noise</h3>
-                        <h3>Role: Solo project — responsible for design, code, and optimisation.</h3>
-                        <p>Developed a C++ engine subsystem to generate infinite procedural terrain using Perlin Noise.
+                        <h3>Project: UE5 Puzzle-Solving Shooter Action Game</h3>
+                        <h3>UE5 | Blueprints | Game Design | AI Behaviour Trees | Animation Blend Spaces</h3>
+                        <h3>Role: Solo project — systems design, Blueprint scripting, and AI behaviours.</h3>
+                        <p>
+                            Unreal Engine 5 shooter prototype that combines environmental puzzles with combat, focusing
+                            on moment-to-moment
+                            feel and AI behaviour.
                         </p>
-                        
                     </div>
                     <div class="project-content">
                         <div class="left-box-pro" data-aos="fade-right">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li> Chunk-based world streaming for endless map generation. </li>
-
-                                <li>Optimised rendering pipeline to lower memory usage and maintain FPS</li>
-
-                                <li>Dynamic texturing by height (land/water differentiation) for visual clarity</li>
+                                <li>Player controller with animation blend spaces and state machines for responsive
+                                    movement.</li>
+                                <li>Shooting mechanics including ammo, reloading, and projectile behaviour.</li>
+                                <li>Interactive puzzle elements (switches, gates) tied into progression.</li>
+                                <li>AI enemies using Behaviour Trees with patrol, detect, and attack states.</li>
+                                <li>HUD for health, ammo, and clear player feedback.</li>
                             </ul>
                         </div>
                         <div class="right-box-pro" data-aos="fade-left">
                             <h4>Challenges and Solutions:</h4>
                             <ul>
-                                <li>Memory Management: Addressed high memory usage by implementing an
-                                    efficient Level of Detail (LOD) system and optimising the terrain rendering process.
-                                </li>
-                                <li>Visual Quality: Improved the visual quality of the terrain by
-                                    incorporating textures and optimising the Perlin Noise algorithm.</li>
+                                <li>Improved AI reliability via UE perception tuning and behaviour tree debugging.</li>
+                                <li>Smoothed animation transitions by carefully configuring blend spaces and state
+                                    machine rules.</li>
+                                <li>Made puzzles readable in combat spaces using lighting, affordances, and HUD
+                                    signposting.</li>
                             </ul>
-                            <a href="https://github.com/CharlotteM7/xcube2d" target="_blank">GitHub repo</a> |
-                            <a href="https://drive.google.com/file/d/1u06vtkEo_khp6cDXHvFQEvv1bRonotUG/view?usp=sharing"
+                            <a href="https://drive.google.com/file/d/11Hs2zcEDq3pt4_otLtUZRnBJic-jwfBR/view?usp=sharing"
                                 target="_blank">Assignment Report</a>
                         </div>
                     </div>
                     <div class="bottom-box">
-                        <iframe width="600" height="350" src="https://www.youtube.com/embed/BHuCU1LuryE"
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/iPR5E-m3djA"
                             frameborder="0"></iframe>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="container-3">
+                <!-- Project 4: Puzzle Solver App -->
+                <div class="container-4">
                     <div class="intro-box">
-                        <h3>Project: Multiplayer Pong Game</h3>
-                        <h3>SDL | C++ | Java-based Multiplayer Server</h3>
-                        <p>Reimagined classic Pong as a multiplayer SDL game with a Java TCP/IP server.</p>
-                        
+                        <h3>Project: Puzzle Solver App</h3>
+                        <h3>React | Web Workers | three.js</h3>
+                        <h3>Role: Group project — algorithms, performance, and a chunk of UI work.</h3>
+                        <p>
+                            A multi-solver interface capable of solving N-Queens, Polyspheres, and pyramid puzzles, with
+                            visualisation
+                            and performance-focused architecture.
+                        </p>
                     </div>
                     <div class="project-content">
                         <div class="left-box-pro" data-aos="fade-right">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>Three-player mode for added strategy and complexity</li>
-                                <li>Power-ups altering ball physics to change gameplay dynamics</li>
-                                <li>TCP/IP networking with client-side prediction for smooth synchronisation</li>
-                                <li>Interactive menu and basic particle system for arcade polish</li>
-
+                                <li>Recursive solving algorithms with pruning and optimisation.</li>
+                                <li>Heavy computation offloaded to multi-threaded Web Workers to keep the UI responsive.
+                                </li>
+                                <li>3D visualisation of puzzle states using three.js.</li>
+                                <li>UI for switching solver types and configuring parameters.</li>
                             </ul>
                         </div>
                         <div class="right-box-pro" data-aos="fade-left">
-                            <h4>Challenges and Solutions:</h4>
+                            <h4>Technical Focus:</h4>
                             <ul>
-                                <li>Latency Management: Implemented client-side prediction and data
-                                    normalisation to minimise latency and ensure responsive gameplay.</li>
-                                <li>Error Handling: Developed robust error handling mechanisms to
-                                    manage network-related issues and maintain game stability.</li>
-                                <li>Scalability:Designed the architecture to handle multiple clients
-                                    efficiently, with considerations for future expansions and additional features.</li>
+                                <li>Separated core solving logic from React components for testability and reuse.</li>
+                                <li>Used worker messaging patterns to keep communication predictable and debuggable.
+                                </li>
+                                <li>Handled long-running solves gracefully with loading states and progress feedback.
+                                </li>
+                            </ul>
+                            <a href="https://github.com/CharlotteM7/puzzle-solver" target="_blank">GitHub repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Web-Based Dungeon Crawler -->
+                <div class="container-5">
+                    <div class="intro-box">
+                        <h3>Project: Web-Based Dungeon Crawler Game</h3>
+                        <h3>Phaser 3 | JavaScript | Web Development</h3>
+                        <h3>Role: Solo project — core game loop, mechanics, and polish.</h3>
+                        <p>
+                            Browser-based dungeon crawler with key collection, traps, and enemy AI, built with Phaser 3.
+                    
+                        </p>
+                    </div>
+                    <div class="project-content">
+                        <div class="left-box-pro" data-aos="fade-right">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Core loop of key collection, trap evasion, and dungeon escape.</li>
+                                <li>Responsive keyboard controls tuned for browser play.</li>
+                                <li>Enemy AI with basic patrol/attack behaviours.</li>
+                                <li>Integrated sound for feedback and atmosphere.</li>
+                            </ul>
+                        </div>
+                        <div class="right-box-pro" data-aos="fade-left">
+                            <h4>Design & Tuning:</h4>
+                            <ul>
+                                <li>Balanced enemy/trap placement to keep difficulty fair but tense.</li>
+                                <li>Iterated on level layouts to avoid dead ends and boring spaces.</li>
+                                <li>Used audio cues to signal danger and reward to the player.</li>
+                            </ul>
+                            <a href="https://github.com/CharlotteM7/CI587-PhaserGame" target="_blank">GitHub repo</a> |
+                            <a href="https://drive.google.com/file/d/1MnGsq_l9KRzV92pOFVi-_bRwuqJ6jhH3/view?usp=sharing"
+                                target="_blank">Assignment Report</a>
+                        </div>
+                    </div>
+                    <div class="bottom-box">
+                        <iframe width="600" height="350" src="https://www.youtube.com/embed/gT_P-MYPPyo"
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+
+                <!-- Project 6: Multiplayer Pong -->
+                <div class="container-6">
+                    <div class="intro-box">
+                        <h3>Project: Multiplayer Pong Game</h3>
+                        <h3>SDL | C++ | Java-based Multiplayer Server</h3>
+                        <h3>Role: Solo project — gameplay, networking, and UI.</h3>
+                        <p>
+                            A twist on classic Pong with three-player mode, power-ups, and a custom Java TCP/IP server.
+                        </p>
+                    </div>
+                    <div class="project-content">
+                        <div class="left-box-pro" data-aos="fade-right">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Three-player mode for added strategy and complexity.</li>
+                                <li>Power-ups that modify ball physics and pacing.</li>
+                                <li>TCP/IP networking with client-side prediction for smoother play.</li>
+                                <li>Menus and basic particle effects for arcade feel.</li>
+                            </ul>
+                        </div>
+                        <div class="right-box-pro" data-aos="fade-left">
+                            <h4>Networking & Reliability:</h4>
+                            <ul>
+                                <li>Implemented client-side prediction and reconciliation to hide latency.</li>
+                                <li>Added robust error handling for disconnects and malformed packets.</li>
+                                <li>Designed protocol and server side to be extendable for future game modes.</li>
                             </ul>
                             <a href="https://github.com/CharlotteM7/CI628-PongServer" target="_blank">GitHub repo
                                 (Server)</a> |
@@ -231,87 +376,6 @@
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="container-4">
-                    <div class="intro-box">
-                        <h3>Project: UE5 Puzzle-Solving Shooter Action Game</h3>
-
-                        <h3>UE5 | Blueprints | Game Design | AI Behaviour Trees | Animation Blend Spaces</h3>
-                        <h3>Role: Solo project — responsible for systems design, Blueprint scripting, and AI behaviours.
-                        </h3>
-                        <p>Created a prototype Unreal Engine 5 shooter integrating puzzles and combat systems.</p>
-                        
-                    </div>
-                    <div class="project-content">
-                        <div class="left-box-pro" data-aos="fade-right">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Player controller with animation blend spaces & state machines for fluid movement
-                                </li>
-                                <li>Shooting mechanics: ammo system, reloading, realistic projectiles</li>
-                                <li>Interactive puzzle elements (switches, gates) integrated into level progression</li>
-                                <li>AI enemies using Behaviour Trees with patrol/detect/attack states. </li>
-                                <li>HUD displaying health, ammo, and player feedback</li>
-
-                            </ul>
-                        </div>
-                        <div class="right-box-pro" data-aos="fade-left">
-                            <h4>Challenges and Solutions:</h4>
-                            <ul>
-                                <li>AI Optimisation: Improved AI detection and behaviour by fine-tuning
-                                    the perception system and behaviour trees.</li>
-                                <li>Animation Synchronisation:Ensured smooth transitions between
-                                    different animations by meticulously setting up blend spaces and state machines.
-                                </li>
-                            </ul>
-                            <a href="https://drive.google.com/file/d/11Hs2zcEDq3pt4_otLtUZRnBJic-jwfBR/view?usp=sharing"
-                                target="_blank">Assignment Report</a>
-                        </div>
-                    </div>
-                    <div class="bottom-box">
-                        <iframe width="600" height="350" src="https://www.youtube.com/embed/iPR5E-m3djA"
-                            frameborder="0"></iframe>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="container-5">
-                    <div class="intro-box">
-                        <h3>Project: Web-Based Dungeon Crawler Game</h3>
-                        <h3>Phaser 3 | JavaScript | Web Development</h3>
-                        <h3>Role:Solo project — designed and programmed entire game loop, mechanics, and polish.</h3>
-                        <p>Developed a browser dungeon crawler using Phaser 3 (JavaScript).</p>
-                        
-                    </div>
-                    <div class="project-content">
-                        <div class="left-box-pro" data-aos="fade-right">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Core loop of key collection, trap evasion, and dungeon escape</li>
-                                <li>Responsive controls tuned for browser play</li>
-                                <li>Enemy AI with basic patrol/attack states</li>
-                                <li>Integrated sound for player feedback and atmosphere</li>
-                            </ul>
-                        </div>
-                        <div class="right-box-pro" data-aos="fade-left">
-                            <h4>Challenges and Solutions:</h4>
-                            <ul>
-                                <li>Enemy and Trap Integration:Balanced the difficulty by adjusting
-                                    enemy behaviours and trap placements, ensuring a challenging yet fair gameplay
-                                    experience.</li>
-                                <li>Player Feedback: Incorporated sound effects for collecting items
-                                    and encountering hazards to provide immediate feedback and enhance immersion.</li>
-                            </ul>
-                            <a href="https://github.com/CharlotteM7/CI587-PhaserGame" target="_blank">GitHub repo</a> |
-                            <a href="https://drive.google.com/file/d/1MnGsq_l9KRzV92pOFVi-_bRwuqJ6jhH3/view?usp=sharing"
-                                target="_blank">Assignment Report</a>
-                        </div>
-                    </div>
-                    <div class="bottom-box">
-                        <iframe width="600" height="350" src="https://www.youtube.com/embed/gT_P-MYPPyo"
-                            frameborder="0"></iframe>
-                    </div>
-                </div>
             </section>
 
         </main>
