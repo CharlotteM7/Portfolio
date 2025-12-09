@@ -88,20 +88,17 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 1400px;
+    max-width: 900px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+    display: block;
+    text-align: left;
 }
+
 
 .hero-text h1 {
     font-size: clamp(3rem, 8vw, 5rem);
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     background: linear-gradient(135deg, #fff 0%, var(--accent-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -209,7 +206,7 @@ nav a:hover {
 }
 
 .about {
-    padding: 4rem 2rem 2rem;
+    padding: 1rem 2rem 2rem;
 }
 
 .about-inner {
