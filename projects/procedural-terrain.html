@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runtime Procedural Terrain · Charlotte Grant</title>
+    <meta name="description" content="A runtime procedural terrain system in UE5 C++ with tiled streaming, LOD and async generation.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href=".././">
+                <strong>Charlotte Grant</strong>
+                <span>Technical Designer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="../index.html#work">Work</a></li>
+                    <li><a href="../code.html">C++ Code</a></li>
+                    <li><a href="mailto:charlottemackay7@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/charlotte-mackay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="../CharlotteMackayCVGame.pdf" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <a class="back-link" href="../index.html#work">&larr; All work</a>
+
+        <section class="project-head">
+            <p class="thumb-kicker">Gameplay Programming · Solo · BSc dissertation</p>
+            <h1>Runtime Procedural Terrain</h1>
+            <ul class="facts">
+                <li><strong>Role:</strong> Solo programmer</li>
+                <li><strong>Context:</strong> BSc Computer Science for Games dissertation</li>
+                <li><strong>Engine:</strong> Unreal Engine 5</li>
+                <li><strong>Tech:</strong> C++, Procedural Mesh Component, Instanced Static Meshes</li>
+                <li><strong>Platform:</strong> PC</li>
+            </ul>
+            <div class="links">
+                <a class="btn primary" href="https://github.com/CharlotteM7/CI601Project" target="_blank" rel="noopener">Code on GitHub</a>
+                <a class="btn" href="https://drive.google.com/file/d/1sfrMn-lDjhmAu4XOi3RuC-xFOFLyRIid/view?usp=sharing" target="_blank" rel="noopener">Dissertation (PDF)</a>
+                <span class="ph inline" data-todo>Download build link</span>
+            </div>
+        </section>
+
+        <section class="block">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/6OUKWoppJMU" title="Runtime Procedural Terrain" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="block two-col">
+            <div>
+                <h2>Overview</h2>
+                <div class="prose"><p>A terrain system that generates and streams the world around the player at runtime. Height comes from four layered octaves of Perlin noise, with a flat, safe spawn area that blends into the landscape. The world is split into tiles that are generated on a background thread, rebuilt at lower detail as the player moves away, and dressed with foliage that respects slope. Players can save and reload a terrain layout, and the navmesh rebuilds so AI can move across new ground.</p></div>
+            </div>
+            <div>
+                <h2>What I built</h2>
+                <ul class="bullets">
+                    <li>Mesh generation: vertices, triangles, UVs, normals and tangents per tile.</li>
+                    <li>Tile streaming around the player with a distance-based LOD queue.</li>
+                    <li>Async generation so new tiles don't stall the game thread.</li>
+                    <li>Seeded foliage scattering with slope checks, using instanced meshes.</li>
+                    <li>Save/load of terrain settings, and runtime navmesh rebuilds.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Screenshots</h2>
+            <div class="gallery">
+                <div class="ph media" data-todo>Screenshot: wide shot of generated terrain</div>
+                <div class="ph media" data-todo>Screenshot: wireframe showing LOD rings</div>
+                <div class="ph media" data-todo>Screenshot: foliage on slopes</div>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Process</h2>
+            
+            <div class="gallery">
+                <div class="ph media" data-todo>Diagram of the tile grid and LOD rings</div>
+                <div class="ph media" data-todo>Profiler capture before optimisation</div>
+                <div class="ph media" data-todo>Profiler capture after optimisation</div>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Code and systems</h2>
+            <p class="prose">The generator owns a queue of tiles keyed by grid coordinate. Each tile is generated off the game thread at a detail level set by its distance from the player.</p>
+            <p style="margin-top:0.8rem"><a class="btn" href="../code.html#terrain">Read the system breakdown</a></p>
+        </section>
+
+        <section class="block">
+            <h2>Reflection</h2>
+            
+            <div class="ph " data-todo>About 100 words in your own voice: the hardest performance problem, what profiling showed you, and how you'd make the system friendlier for designers.</div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>Charlotte Grant · Technical Designer</span>
+            <span>
+                <a href="mailto:charlottemackay7@gmail.com">Email</a>
+                <a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/charlotte-mackay/" target="_blank" rel="noopener">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>

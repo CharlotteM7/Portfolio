@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Puzzle Game · Charlotte Grant</title>
+    <meta name="description" content="An educational third-person cryptography puzzle game in UE5, built in C++ and Blueprints.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href=".././">
+                <strong>Charlotte Grant</strong>
+                <span>Technical Designer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="../index.html#work">Work</a></li>
+                    <li><a href="../code.html">C++ Code</a></li>
+                    <li><a href="mailto:charlottemackay7@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/charlotte-mackay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="../CharlotteMackayCVGame.pdf" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <a class="back-link" href="../index.html#work">&larr; All work</a>
+
+        <section class="project-head">
+            <p class="thumb-kicker">Technical Design · Solo · MSc dissertation</p>
+            <h1>Cryptography Puzzle Game</h1>
+            <ul class="facts">
+                <li><strong>Role:</strong> Solo designer and programmer</li>
+                <li><strong>Context:</strong> MSc Advanced Computer Science dissertation</li>
+                <li><strong>Engine:</strong> Unreal Engine 5</li>
+                <li><strong>Tech:</strong> C++, Blueprints, UMG</li>
+                <li><strong>Platform:</strong> PC</li>
+            </ul>
+            <div class="links">
+                <a class="btn primary" href="https://github.com/CharlotteM7/MScProject" target="_blank" rel="noopener">Code on GitHub</a>
+                <a class="btn" href="https://drive.google.com/file/d/1v7jOQexqQ_p9935xNVv1w3tvF2asYNRN/view?usp=drive_link" target="_blank" rel="noopener">Dissertation (PDF)</a>
+                <span class="ph inline" data-todo>Playable build link (itch.io)</span>
+            </div>
+        </section>
+
+        <section class="block">
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/Lf1e3lladRQ" title="Cryptography Puzzle Game" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="block two-col">
+            <div>
+                <h2>Overview</h2>
+                <div class="prose"><p>A third-person detective game that teaches substitution ciphers. Players explore a scene, collect clues and decode messages to progress, with a notebook that updates as they learn. I wanted the teaching to happen through play rather than tutorials, so every cipher is tied to an objective and a place in the level. Hints scale with the player, keeping it approachable for beginners. In user testing, players rated clarity and engagement 4/5 or higher on the key measures.</p></div>
+            </div>
+            <div>
+                <h2>My role</h2>
+                <ul class="bullets">
+                    <li>Designed the puzzle progression, level layout and narrative framing.</li>
+                    <li>Wrote the objective, clue and cipher-puzzle systems in C++, exposed to Blueprints.</li>
+                    <li>Built the notebook UI that pulls notes from the current objective.</li>
+                    <li>Designed the hint system and ran user testing.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Screenshots</h2>
+            <div class="gallery">
+                <div class="ph media" data-todo>Screenshot: the notebook UI mid-puzzle</div>
+                <div class="ph media" data-todo>Screenshot: a cipher puzzle on screen</div>
+                <div class="ph media" data-todo>Screenshot: the level and a clue in the world</div>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Top-down map</h2>
+            <div class="ph map" data-todo>Labelled top-down map: clue locations, puzzle stations, the order players meet each cipher, and where hints kick in.</div>
+        </section>
+
+        <section class="block">
+            <h2>Process</h2>
+            
+            <div class="gallery">
+                <div class="ph media" data-todo>Puzzle flow diagram (clue, cipher, objective)</div>
+                <div class="ph media" data-todo>Early greybox of the level</div>
+                <div class="ph media" data-todo>User testing results chart from the dissertation</div>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Code and systems</h2>
+            <p class="prose">Objectives are plain structs that designers fill in, and puzzles and clues talk to an objective manager through delegates, so new puzzles drop in without touching existing code.</p>
+            <p style="margin-top:0.8rem"><a class="btn" href="../code.html#objectives">Read the system breakdown</a></p>
+        </section>
+
+        <section class="block">
+            <h2>Reflection</h2>
+            
+            <div class="ph " data-todo>About 100 words in your own voice: what you learned about teaching through play, what testers struggled with, and what you'd change in the puzzle flow.</div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>Charlotte Grant · Technical Designer</span>
+            <span>
+                <a href="mailto:charlottemackay7@gmail.com">Email</a>
+                <a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/charlotte-mackay/" target="_blank" rel="noopener">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Pong · Charlotte Grant</title>
+    <meta name="description" content="A three-player networked Pong with a C++/SDL2 client and a Java server.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href=".././">
+                <strong>Charlotte Grant</strong>
+                <span>Technical Designer</span>
+            </a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="../index.html#work">Work</a></li>
+                    <li><a href="../code.html">C++ Code</a></li>
+                    <li><a href="mailto:charlottemackay7@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/charlotte-mackay/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="../CharlotteMackayCVGame.pdf" target="_blank" rel="noopener">CV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <a class="back-link" href="../index.html#work">&larr; All work</a>
+
+        <section class="project-head">
+            <p class="thumb-kicker">Gameplay Programming · Solo · University module</p>
+            <h1>Multiplayer Pong</h1>
+            <ul class="facts">
+                <li><strong>Role:</strong> Solo programmer, client and server</li>
+                <li><strong>Context:</strong> University module, built on the module's starter projects</li>
+                <li><strong>Client:</strong> C++, SDL2 (ttf, mixer, image)</li>
+                <li><strong>Server:</strong> Java, FXGL</li>
+                <li><strong>Platform:</strong> Windows</li>
+            </ul>
+            <div class="links">
+                <a class="btn primary" href="https://github.com/CharlotteM7/CI628-PongClient" target="_blank" rel="noopener">Client code (C++)</a>
+                <a class="btn" href="https://github.com/CharlotteM7/CI628-PongServer" target="_blank" rel="noopener">Server code (Java)</a>
+            </div>
+        </section>
+
+        <section class="block">
+            <div class="ph media" data-todo>Gameplay video, 2 to 10 minutes. Upload to YouTube and swap this box for the embed.</div>
+        </section>
+
+        <section class="block two-col">
+            <div>
+                <h2>Overview</h2>
+                <div class="prose"><p>I took the module's basic two-player client and server and turned them into a three-player game. A third, horizontal bat guards the bottom of the screen, and a power-up spawns in the middle of the court. The server runs the simulation and sends state to the client, which renders it in SDL2 with particles, sound effects, a pause menu and a win screen.</p></div>
+            </div>
+            <div>
+                <h2>What I added</h2>
+                <ul class="bullets">
+                    <li>Third player with a horizontal bat, and per-player scoring.</li>
+                    <li>Power-up pickup synced from the server.</li>
+                    <li>Client-side particles, sound effects and bat textures.</li>
+                    <li>Pause menu with a controls screen, and a win screen.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Screenshots</h2>
+            <div class="gallery">
+                <div class="ph media" data-todo>Screenshot: three-player match in progress</div>
+                <div class="ph media" data-todo>Screenshot: power-up and particles</div>
+                <div class="ph media" data-todo>Screenshot: pause menu</div>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Process</h2>
+            
+            <div class="gallery">
+                <div class="ph media" data-todo>Diagram of client and server messages</div>
+                <div class="ph media" data-todo>Early two-player version</div>
+                <div class="ph media" data-todo>Final three-player version</div>
+            </div>
+        </section>
+
+        <section class="block">
+            <h2>Code and systems</h2>
+            <p class="prose">The server owns the game state. The client sends input and parses state messages each frame.</p>
+            <p style="margin-top:0.8rem"><a class="btn" href="../code.html#pong">Read the system breakdown</a></p>
+        </section>
+
+        <section class="block">
+            <h2>Reflection</h2>
+            
+            <div class="ph " data-todo>About 100 words in your own voice: what you learned about splitting work between client and server, and what you'd do about latency next time.</div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>Charlotte Grant · Technical Designer</span>
+            <span>
+                <a href="mailto:charlottemackay7@gmail.com">Email</a>
+                <a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/charlotte-mackay/" target="_blank" rel="noopener">LinkedIn</a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>
