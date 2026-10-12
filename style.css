@@ -1114,3 +1114,13 @@ li code {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Key art on the War of Being page */
+.key-art {
+  aspect-ratio: auto;
+}
+
+.key-art img {
+  width: 100%;
+  height: auto;
+}
