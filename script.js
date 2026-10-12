@@ -11,8 +11,8 @@
   const PH = 36;
   const BALL = 6;
   const WIN = 5;
-  const FONT = '"Press Start 2P", monospace';
-  const COLORS = { ball: '#ffd23f', p1: '#3ef0ff', p2: '#ff4f8b', net: 'rgba(255,255,255,0.35)', text: '#ffffff' };
+  const FONT = '"Jersey 10", monospace';
+  const COLORS = { bg: '#5fb04f', stripe: '#57a548', ball: '#ffffff', p1: '#fcefcb', p2: '#d9533b', net: 'rgba(255,255,255,0.8)', text: '#ffffff', shadow: '#2c5a2a', gold: '#f5b82e' };
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   let mode = 'demo'; // demo | play | over
@@ -124,37 +124,48 @@
   function text(str, x, y, size, color, align = 'center') {
     ctx.font = `${size}px ${FONT}`;
     ctx.textAlign = align;
+    ctx.fillStyle = COLORS.shadow;
+    ctx.fillText(str, x + 2, y + 2);
     ctx.fillStyle = color;
     ctx.fillText(str, x, y);
   }
 
+  // Filled rectangle with a dark pixel outline
+  function block(x, y, w, h, color) {
+    x = Math.round(x);
+    y = Math.round(y);
+    ctx.fillStyle = COLORS.shadow;
+    ctx.fillRect(x - 1, y - 1, w + 2, h + 2);
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, w, h);
+  }
+
   function draw() {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = COLORS.bg;
     ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = COLORS.stripe;
+    for (let x = 0; x < W; x += 40) ctx.fillRect(x + 20, 0, 20, H);
 
     ctx.fillStyle = COLORS.net;
     for (let y = 4; y < H; y += 12) ctx.fillRect(W / 2 - 1, y, 2, 6);
 
-    text(String(left.score), W / 2 - 30, 28, 16, COLORS.text);
-    text(String(right.score), W / 2 + 30, 28, 16, COLORS.text);
+    text(String(left.score), W / 2 - 30, 34, 32, COLORS.text);
+    text(String(right.score), W / 2 + 30, 34, 32, COLORS.text);
 
-    ctx.fillStyle = COLORS.p1;
-    ctx.fillRect(12, Math.round(left.y), PW, PH);
-    ctx.fillStyle = COLORS.p2;
-    ctx.fillRect(W - 12 - PW, Math.round(right.y), PW, PH);
+    block(12, left.y, PW, PH, COLORS.p1);
+    block(W - 12 - PW, right.y, PW, PH, COLORS.p2);
 
     if (mode !== 'over') {
-      ctx.fillStyle = COLORS.ball;
-      ctx.fillRect(Math.round(ball.x), Math.round(ball.y), BALL, BALL);
+      block(ball.x, ball.y, BALL, BALL, COLORS.ball);
     }
 
     if (mode === 'demo' && Math.floor(frame / 30) % 2 === 0) {
-      text('PRESS START', W / 2, H / 2 + 50, 10, COLORS.ball);
+      text('PRESS START', W / 2, H / 2 + 56, 26, COLORS.gold);
     }
     if (mode === 'over') {
       const won = left.score > right.score;
-      text(won ? 'YOU WIN!' : 'GAME OVER', W / 2, H / 2 - 4, 16, won ? COLORS.p1 : COLORS.p2);
-      text('CLICK TO PLAY AGAIN', W / 2, H / 2 + 22, 8, COLORS.text);
+      text(won ? 'YOU WIN!' : 'GAME OVER', W / 2, H / 2 - 4, 36, won ? COLORS.gold : COLORS.text);
+      text('CLICK TO PLAY AGAIN', W / 2, H / 2 + 24, 18, COLORS.text);
     }
   }
 
