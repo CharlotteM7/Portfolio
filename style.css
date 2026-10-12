@@ -1059,3 +1059,58 @@ li code {
 .exp-link a:hover {
   text-decoration: underline;
 }
+
+.intro-meta {
+  margin-top: 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* Skills: three parchment panels with item chips */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.8rem;
+  padding: var(--px);
+}
+
+.skill-panel {
+  background: var(--parch);
+  padding: 1.1rem 1.2rem 1.3rem;
+  box-shadow:
+    0 -4px 0 0 var(--wood-dark),
+    0 4px 0 0 var(--wood-dark),
+    -4px 0 0 0 var(--wood-dark),
+    4px 0 0 0 var(--wood-dark),
+    inset 0 0 0 3px var(--wood-light),
+    0 10px 0 0 rgba(59, 38, 20, 0.18);
+}
+
+.skill-panel h3 {
+  font-size: 1.7rem;
+  color: var(--grass-dark);
+  margin-bottom: 0.7rem;
+}
+
+.skill-panel ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-panel li {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff8e3;
+  padding: 0.25rem 0.6rem;
+  box-shadow: 0 3px 0 var(--parch-2), inset 0 0 0 2px var(--parch-2);
+}
+
+@media (max-width: 960px) {
+  .skills {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
