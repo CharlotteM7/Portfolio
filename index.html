@@ -9,7 +9,7 @@
         content="Charlotte Grant, Technical Designer and Gameplay Programmer working in Unreal Engine 5, C++ and Blueprints.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Press+Start+2P&family=VT323&display=swap"
         rel="stylesheet">
 </head>
 
@@ -32,24 +32,35 @@
     </header>
 
     <main>
-        <section class="intro wrap">
-            <h1>Charlotte Grant</h1>
-            <p class="role-primary">Technical Designer</p>
-            <p class="role-secondary">Gameplay Programmer · Unreal Engine 5, C++ and Blueprints</p>
+        <section class="hero wrap">
+            <div>
+                <p class="player-tag">PLAYER 1 <span class="cursor blink"></span></p>
+                <h1>Charlotte Grant</h1>
+                <p class="role-primary">Technical Designer</p>
+                <p class="role-secondary">Gameplay Programmer · Unreal Engine 5, C++ and Blueprints</p>
 
-            <ul class="contact-row">
-                <li><a class="primary" href="mailto:charlottecegrant@gmail.com">charlottecegrant@gmail.com</a></li>
-                <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a>
-                </li>
-                <li><a href="CharlotteGrantCV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
-            </ul>
+                <ul class="contact-row">
+                    <li><a class="primary" href="mailto:charlottecegrant@gmail.com">charlottecegrant@gmail.com</a></li>
+                    <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a>
+                    </li>
+                    <li><a href="CharlotteGrantCV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+                </ul>
 
-            <p class="intro-summary">
-                I build levels and the systems that run them. I'm a volunteer Game Developer on
-                <em>War of Being</em>, and my university projects cover puzzle systems, procedural terrain and
-                networked gameplay in C++.
-            </p>
+                <p class="intro-summary">
+                    I build levels and the systems that run them. I'm a volunteer Game Developer on
+                    <em>War of Being</em>, and my university projects cover puzzle systems, procedural terrain and
+                    networked gameplay in C++.
+                </p>
+            </div>
+
+            <div class="arcade-wrap">
+                <div class="arcade">
+                    <canvas id="pong" width="320" height="240" tabindex="0"
+                        aria-label="Playable mini Pong. Click or tap to play, then move the mouse, drag, or use the arrow keys."></canvas>
+                </div>
+                <p class="arcade-caption"><strong>Click to play</strong> · mouse, drag or arrow keys · first to 5</p>
+            </div>
         </section>
 
         <section id="work" class="section wrap">
@@ -61,7 +72,7 @@
             <div class="thumb-grid">
                 <a class="thumb" href="projects/war-of-being.html">
                     <div class="thumb-img">
-                        <div class="text-tile"><span>War of Being</span><small>Under NDA</small></div>
+                        <div class="text-tile"><span class="planet"></span><span>WAR OF BEING</span><small>CLASSIFIED · NDA</small></div>
                         <span class="badge">Studio · In development</span>
                     </div>
                     <div class="thumb-body">
@@ -116,7 +127,13 @@
 
                 <a class="thumb" href="projects/multiplayer-pong.html">
                     <div class="thumb-img">
-                        <div class="text-tile"><span>Pong</span><small>C++ · SDL2 · Java</small></div>
+                        <div class="tile-pong">
+                            <span class="paddle p1"></span>
+                            <span class="paddle p2"></span>
+                            <span class="paddle p3"></span>
+                            <span class="powerup"></span>
+                            <span class="ball"></span>
+                        </div>
                         <span class="badge">University module</span>
                     </div>
                     <div class="thumb-body">
@@ -183,6 +200,8 @@
             </span>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
