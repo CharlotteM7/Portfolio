@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlotte Grant · Technical Designer</title>
     <meta name="description"
-        content="Charlotte Grant, Technical Designer working in Unreal Engine 5 with Blueprints and C++.">
+        content="Charlotte Grant, Technical Designer and Gameplay Programmer working in Unreal Engine 5, C++ and Blueprints.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -17,16 +17,13 @@
     <header class="site-header">
         <div class="wrap">
             <a class="brand" href="./">
-                <span class="brand-text">
-                    <strong>Charlotte Grant</strong>
-                    <span>Technical Designer</span>
-                </span>
+                <strong>Charlotte Grant</strong>
+                <span>Technical Designer</span>
             </a>
             <nav class="site-nav" aria-label="Main">
                 <ul>
                     <li><a href="#work">Work</a></li>
                     <li><a href="code.html">C++ Code</a></li>
-                    <li><a href="#loadout">Skills</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="CharlotteGrantCV.pdf" target="_blank" rel="noopener">CV</a></li>
                 </ul>
@@ -35,303 +32,107 @@
     </header>
 
     <main>
-        <section class="hero wrap">
-            <div>
-                <p class="mono-label">// Unreal Engine 5 · Blueprints · C++</p>
-                <h1>Charlotte <span class="accent">Grant</span></h1>
-                <p class="role-primary">Technical Designer</p>
-                <p class="role-secondary">Gameplay Programmer · levels, systems and the tools behind them</p>
+        <section class="intro wrap">
+            <h1>Charlotte Grant</h1>
+            <p class="role-primary">Technical Designer</p>
+            <p class="role-secondary">Gameplay Programmer · Unreal Engine 5, C++ and Blueprints</p>
 
-                <ul class="contact-row">
-                    <li><a class="primary" href="mailto:charlottecegrant@gmail.com">charlottecegrant@gmail.com</a></li>
-                    <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a>
-                    </li>
-                    <li><a href="CharlotteGrantCV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
-                </ul>
+            <ul class="contact-row">
+                <li><a class="primary" href="mailto:charlottecegrant@gmail.com">charlottecegrant@gmail.com</a></li>
+                <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a>
+                </li>
+                <li><a href="CharlotteGrantCV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+            </ul>
 
-                <p class="intro-summary">
-                    I build levels and the systems that run them. I'm a volunteer Game Developer on
-                    <em>War of Being</em>, and my university projects cover puzzle systems, procedural terrain and
-                    networked gameplay in C++.
-                </p>
-            </div>
-
-            <div class="graph" aria-hidden="true">
-                <svg viewBox="0 0 560 380">
-                    <!-- comment box -->
-                    <rect x="6" y="6" width="548" height="368" rx="10" fill="rgba(255,255,255,0.025)"
-                        stroke="rgba(255,255,255,0.12)" stroke-dasharray="4 4" />
-                    <text class="comment-label" x="20" y="28">How I work</text>
-
-                    <!-- wires -->
-                    <path class="wire" d="M180,92 C220,92 220,92 260,92" />
-                    <path class="wire-pulse" d="M180,92 C220,92 220,92 260,92" />
-                    <path class="wire" d="M520,92 C570,92 560,200 300,200 C30,200 20,262 70,262" />
-                    <path class="wire-pulse" d="M520,92 C570,92 560,200 300,200 C30,200 20,262 70,262" />
-                    <path class="wire" d="M250,262 C280,262 280,262 310,262" />
-                    <path class="wire-pulse" d="M250,262 C280,262 280,262 310,262" />
-                    <path class="wire-loop" d="M514,300 C560,300 560,138 514,138" />
-
-                    <!-- Event BeginPlay -->
-                    <g>
-                        <rect class="node-body" x="30" y="50" width="150" height="62" rx="9" />
-                        <path d="M30,59 a9,9 0 0 1 9,-9 h132 a9,9 0 0 1 9,9 v17 h-150 z" fill="#c0392b" />
-                        <text class="node-title" x="42" y="69">Event BeginPlay</text>
-                        <polygon points="166,86 174,92 166,98" fill="#fff" />
-                    </g>
-
-                    <!-- Blockout Level -->
-                    <g>
-                        <rect class="node-body" x="260" y="50" width="260" height="104" rx="9" />
-                        <path d="M260,59 a9,9 0 0 1 9,-9 h242 a9,9 0 0 1 9,9 v17 h-260 z" fill="#2d6fc0" />
-                        <text class="node-title" x="272" y="69">ƒ Blockout Level</text>
-                        <polygon points="266,86 274,92 266,98" fill="#fff" />
-                        <polygon points="506,86 514,92 506,98" fill="#fff" />
-                        <circle cx="271" cy="116" r="5" fill="#ff8a4c" />
-                        <text class="node-row" x="284" y="120">Greybox spaces</text>
-                        <circle cx="271" cy="138" r="5" fill="#ff8a4c" />
-                        <text class="node-row" x="284" y="142">Player-readable paths</text>
-                        <circle cx="509" cy="138" r="5" fill="#3fd0d8" />
-                        <text class="node-row" x="498" y="142" text-anchor="end">Feedback</text>
-                    </g>
-
-                    <!-- Script Gameplay -->
-                    <g>
-                        <rect class="node-body" x="70" y="220" width="180" height="126" rx="9" />
-                        <path d="M70,229 a9,9 0 0 1 9,-9 h162 a9,9 0 0 1 9,9 v17 h-180 z" fill="#2d6fc0" />
-                        <text class="node-title" x="82" y="239">ƒ Script Gameplay</text>
-                        <polygon points="76,256 84,262 76,268" fill="#fff" />
-                        <polygon points="236,256 244,262 236,268" fill="#fff" />
-                        <circle cx="81" cy="288" r="5" fill="#9be15d" />
-                        <text class="node-row" x="94" y="292">Interactables</text>
-                        <circle cx="81" cy="310" r="5" fill="#9be15d" />
-                        <text class="node-row" x="94" y="314">Triggers</text>
-                        <circle cx="81" cy="332" r="5" fill="#9be15d" />
-                        <text class="node-row" x="94" y="336">Dialogue trees</text>
-                    </g>
-
-                    <!-- Playtest -->
-                    <g>
-                        <rect class="node-body" x="310" y="220" width="210" height="100" rx="9" />
-                        <path d="M310,229 a9,9 0 0 1 9,-9 h192 a9,9 0 0 1 9,9 v17 h-210 z" fill="#7a4fc4" />
-                        <text class="node-title" x="322" y="239">Playtest &amp; Iterate</text>
-                        <polygon points="316,256 324,262 316,268" fill="#fff" />
-                        <circle cx="321" cy="282" r="5" fill="#ff5f9e" />
-                        <text class="node-row" x="334" y="286">Build</text>
-                        <circle cx="509" cy="300" r="5" fill="#3fd0d8" />
-                        <text class="node-row" x="498" y="304" text-anchor="end">What players did</text>
-                    </g>
-                </svg>
-            </div>
+            <p class="intro-summary">
+                I build levels and the systems that run them. I'm a volunteer Game Developer on
+                <em>War of Being</em>, and my university projects cover puzzle systems, procedural terrain and
+                networked gameplay in C++.
+            </p>
         </section>
 
         <section id="work" class="section wrap">
             <div class="section-title">
-                <div>
-                    <p class="mono-label">// select a level</p>
-                    <h2>Work</h2>
-                </div>
+                <h2>Work</h2>
                 <p>Click a project for details, video and code.</p>
             </div>
 
             <div class="thumb-grid">
                 <a class="thumb" href="projects/war-of-being.html">
                     <div class="thumb-img">
-                        <div class="tile-scifi"></div>
-                        <span class="tile-title">War of Being</span>
-                        <span class="stamp">NDA</span>
+                        <div class="text-tile"><span>War of Being</span><small>Under NDA</small></div>
                         <span class="badge">Studio · In development</span>
                     </div>
                     <div class="thumb-body">
-                        <p class="lvl">LVL 01 · LEVEL DESIGN · TEAM</p>
+                        <p class="thumb-kicker">Level Design · Team</p>
                         <h3>War of Being</h3>
                         <p class="thumb-role">Volunteer Game Developer, DMTesseracT Ltd</p>
-                        <ul class="thumb-tags">
-                            <li>UE5</li>
-                            <li>Blueprints</li>
-                            <li>Interactables</li>
-                            <li>Dialogue</li>
-                            <li>Level sequences</li>
-                        </ul>
+                        <p class="thumb-tags">UE5 · Blueprints · Interactables · Dialogue · Level sequences</p>
                     </div>
                 </a>
 
-                <a class="thumb tone-cyan" href="projects/cipher-puzzle-game.html">
+                <a class="thumb" href="projects/cipher-puzzle-game.html">
                     <div class="thumb-img">
                         <img src="https://img.youtube.com/vi/Lf1e3lladRQ/hqdefault.jpg"
                             alt="Cryptography puzzle game gameplay" loading="lazy">
                         <span class="badge">MSc dissertation</span>
-                        <span class="play-chip">▶ WATCH</span>
                     </div>
                     <div class="thumb-body">
-                        <p class="lvl">LVL 02 · TECHNICAL DESIGN · SOLO</p>
+                        <p class="thumb-kicker">Technical Design · Solo</p>
                         <h3>Cryptography Puzzle Game</h3>
                         <p class="thumb-role">Solo designer and developer</p>
-                        <ul class="thumb-tags">
-                            <li>UE5</li>
-                            <li>C++</li>
-                            <li>Blueprints</li>
-                            <li>Puzzle design</li>
-                        </ul>
+                        <p class="thumb-tags">UE5 · C++ · Blueprints · Puzzle design</p>
                     </div>
                 </a>
 
-                <a class="thumb tone-lime" href="projects/procedural-terrain.html">
+                <a class="thumb" href="projects/procedural-terrain.html">
                     <div class="thumb-img">
                         <img src="https://img.youtube.com/vi/6OUKWoppJMU/hqdefault.jpg"
                             alt="Runtime procedural terrain in UE5" loading="lazy">
                         <span class="badge">BSc dissertation</span>
-                        <span class="play-chip">▶ WATCH</span>
                     </div>
                     <div class="thumb-body">
-                        <p class="lvl">LVL 03 · SYSTEMS DESIGN · SOLO</p>
+                        <p class="thumb-kicker">Systems Design · Solo</p>
                         <h3>Runtime Procedural Terrain</h3>
                         <p class="thumb-role">Solo developer</p>
-                        <ul class="thumb-tags">
-                            <li>UE5</li>
-                            <li>C++</li>
-                            <li>Procedural mesh</li>
-                            <li>Async generation</li>
-                        </ul>
+                        <p class="thumb-tags">UE5 · C++ · Procedural mesh · Async generation</p>
                     </div>
                 </a>
 
-                <a class="thumb tone-pink" href="projects/puzzle-shooter.html">
+                <a class="thumb" href="projects/puzzle-shooter.html">
                     <div class="thumb-img">
                         <img src="https://img.youtube.com/vi/QzhzO9FrpA0/hqdefault.jpg"
                             alt="Puzzle-action shooter gameplay" loading="lazy">
                         <span class="badge">Prototype</span>
-                        <span class="play-chip">▶ WATCH</span>
                     </div>
                     <div class="thumb-body">
-                        <p class="lvl">LVL 04 · LEVEL &amp; COMBAT DESIGN · SOLO</p>
+                        <p class="thumb-kicker">Level &amp; Combat Design · Solo</p>
                         <h3>Puzzle-Action Shooter</h3>
                         <p class="thumb-role">Solo designer and developer</p>
-                        <ul class="thumb-tags">
-                            <li>UE5</li>
-                            <li>Blueprints</li>
-                            <li>AI</li>
-                            <li>Encounter pacing</li>
-                        </ul>
+                        <p class="thumb-tags">UE5 · Blueprints · AI · Encounter pacing</p>
                     </div>
                 </a>
 
-                <a class="thumb tone-lime" href="projects/multiplayer-pong.html">
+                <a class="thumb" href="projects/multiplayer-pong.html">
                     <div class="thumb-img">
-                        <div class="tile-pong">
-                            <span class="paddle p1"></span>
-                            <span class="paddle p2"></span>
-                            <span class="paddle p3"></span>
-                            <span class="powerup"></span>
-                            <span class="ball"></span>
-                            <span class="tile-title">3P PONG</span>
-                        </div>
+                        <div class="text-tile"><span>Pong</span><small>C++ · SDL2 · Java</small></div>
                         <span class="badge">University module</span>
                     </div>
                     <div class="thumb-body">
-                        <p class="lvl">LVL 05 · GAMEPLAY SYSTEMS · SOLO</p>
+                        <p class="thumb-kicker">Gameplay Systems · Solo</p>
                         <h3>Multiplayer Pong</h3>
                         <p class="thumb-role">Solo developer, client and server</p>
-                        <ul class="thumb-tags">
-                            <li>C++</li>
-                            <li>SDL2</li>
-                            <li>Java server</li>
-                            <li>Networking</li>
-                        </ul>
+                        <p class="thumb-tags">C++ · SDL2 · Java server · Networking</p>
                     </div>
                 </a>
 
-                <a class="thumb tone-cyan" href="code.html">
-                    <div class="thumb-img">
-                        <div class="tile-code">
-                            <span class="ln"><i>01</i><b class="k">void</b> UObjectiveManager::<b class="f">NotifyPuzzleSolved</b>(int32 Index)</span>
-                            <span class="ln"><i>02</i>{</span>
-                            <span class="ln"><i>03</i>&nbsp;&nbsp;<b class="c">// Broadcast so the notebook updates</b></span>
-                            <span class="ln"><i>04</i>&nbsp;&nbsp;OnObjectiveUpdated.<b class="f">Broadcast</b>(CurrentObjectiveIndex);</span>
-                            <span class="ln"><i>05</i>}</span>
-                            <span class="ln"><i>06</i></span>
-                            <span class="ln"><i>07</i><b class="k">float</b> AWorldGenerator::<b class="f">GetHeight</b>(FVector2D Location)</span>
-                            <span class="ln"><i>08</i><b class="caret">_</b></span>
-                        </div>
-                        <span class="badge">3 systems</span>
-                    </div>
-                    <div class="thumb-body">
-                        <p class="lvl">BONUS LEVEL · C++ CODE</p>
-                        <h3>How my systems are built</h3>
-                        <p class="thumb-role">Design notes and links straight to the source</p>
-                        <ul class="thumb-tags">
-                            <li>Objectives &amp; puzzles</li>
-                            <li>Terrain streaming</li>
-                            <li>Networking</li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section id="loadout" class="section wrap">
-            <div class="section-title">
-                <div>
-                    <p class="mono-label">// loadout</p>
-                    <h2>Skills</h2>
-                </div>
-            </div>
-            <div class="loadout">
-                <div class="node macro">
-                    <div class="node-head">Design</div>
-                    <div class="node-body">
-                        <ul class="slots">
-                            <li>Level design</li>
-                            <li>Greyboxing</li>
-                            <li>Puzzle design</li>
-                            <li>Encounter flow &amp; pacing</li>
-                            <li>Player-readable navigation</li>
-                            <li>Playtesting &amp; iteration</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="node func">
-                    <div class="node-head">Unreal Engine 5</div>
-                    <div class="node-body">
-                        <ul class="slots">
-                            <li>Blueprints</li>
-                            <li>C++</li>
-                            <li>Gameplay Framework</li>
-                            <li>Behaviour Trees</li>
-                            <li>Animation Blueprints</li>
-                            <li>UI / UMG</li>
-                            <li>PCG</li>
-                            <li>World Partition</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="node pure">
-                    <div class="node-head">Code &amp; Tools</div>
-                    <div class="node-body">
-                        <ul class="slots">
-                            <li>C++</li>
-                            <li>C#</li>
-                            <li>Python</li>
-                            <li>JavaScript / TypeScript</li>
-                            <li>Java</li>
-                            <li>PHP</li>
-                            <li>Perforce</li>
-                            <li>Git</li>
-                            <li>Visual Studio</li>
-                            <li>Blender</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section id="experience" class="section wrap">
             <div class="section-title">
-                <div>
-                    <p class="mono-label">// quest log</p>
-                    <h2>Experience</h2>
-                </div>
+                <h2>Experience</h2>
             </div>
             <ul class="exp-list">
                 <li>
@@ -356,47 +157,18 @@
 
         <section id="about" class="section wrap">
             <div class="section-title">
-                <div>
-                    <p class="mono-label">// player profile</p>
-                    <h2>About</h2>
-                </div>
+                <h2>About</h2>
             </div>
-            <div class="about-grid">
-                <div class="prose">
-                    <p>
-                        I work where design and code meet. I like blocking out a space, finding out what the player
-                        needs from it, then building the systems that make it work: objectives, puzzles,
-                        interactables, enemy behaviour and the tools designers use to tune them.
-                    </p>
-                    <p>
-                        Before games I spent 14 years in project management, QA and team leadership, so I'm at home
-                        with requirements, deadlines and working across disciplines.
-                    </p>
-                </div>
-                <div class="node func">
-                    <div class="node-head">Stats</div>
-                    <div class="node-body">
-                        <ul class="stat-list">
-                            <li><span>MSc</span><strong>Advanced Computer Science, Distinction</strong></li>
-                            <li><span>BSc</span><strong>Computer Science for Games, First Class</strong></li>
-                            <li><span>Base</span><strong>UK · open to remote</strong></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section wrap">
-            <div class="cta">
-                <p class="mono-label">// press start</p>
-                <h2>Let's make something players remember.</h2>
-                <p>I'm looking for Technical Designer roles. The fastest way to reach me is email.</p>
-                <ul class="contact-row">
-                    <li><a class="primary" href="mailto:charlottecegrant@gmail.com">Email me</a></li>
-                    <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a>
-                    </li>
-                    <li><a href="CharlotteGrantCV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
-                </ul>
+            <div class="prose">
+                <p>
+                    I work where design and code meet. I like blocking out a space, finding out what the player needs
+                    from it, then building the systems that make it work: objectives, puzzles, interactables, enemy
+                    behaviour and the tools designers use to tune them.
+                </p>
+                <p>
+                    I have an MSc in Advanced Computer Science (Distinction) and a BSc in Computer Science for Games
+                    (First Class). I'm based in the UK and open to remote roles.
+                </p>
             </div>
         </section>
     </main>
@@ -411,8 +183,6 @@
             </span>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
