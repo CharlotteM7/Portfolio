@@ -22,7 +22,6 @@
             <nav class="site-nav" aria-label="Main">
                 <ul>
                     <li><a href="../index.html#work">Work</a></li>
-                    <li><a href="../code.html">C++ Code</a></li>
                     <li><a href="mailto:charlottecegrant@gmail.com">Email</a></li>
                     <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -48,6 +47,7 @@
             <div class="links">
                 <a class="btn primary" href="https://github.com/CharlotteM7/MScProject" target="_blank" rel="noopener">Code on GitHub</a>
                 <a class="btn" href="https://drive.google.com/file/d/1v7jOQexqQ_p9935xNVv1w3tvF2asYNRN/view?usp=drive_link" target="_blank" rel="noopener">Dissertation (PDF)</a>
+                <a class="btn" href="#code">How it's built ↓</a>
             </div>
         </section>
 
@@ -76,9 +76,61 @@
 
 
         <section class="block">
-            <h2>Code and systems</h2>
-            <p class="prose">Objectives are plain structs that designers fill in, and puzzles and clues talk to an objective manager through delegates, so new puzzles drop in without touching existing code.</p>
-            <p style="margin-top:0.8rem"><a class="btn" href="../code.html#objectives">Read the system breakdown</a></p>
+            <article class="system" id="code">
+                <h2>Objective, clue and puzzle system</h2>
+                <p class="sub">How it's built · UE5 C++ exposed to Blueprints</p>
+                <div class="two-col">
+                    <div>
+                        <h3>Problem</h3>
+                        <p class="prose">The game needed a chain of objectives where each step might need a clue
+                            found, a cipher solved, or both, and the notebook UI had to show the right notes at each
+                            step. I wanted to add and reorder puzzles in the editor without new code.</p>
+                        <h3>Design</h3>
+                        <ul class="bullets">
+                            <li><code>FObjective</code> is a Blueprint-visible struct: title, description, the clue ID
+                                and puzzle tag it needs, and notes shown before and after it's solved.</li>
+                            <li><code>UObjectiveManager</code> is an actor component holding the ordered list and the
+                                current index. Designers edit the list in the Details panel.</li>
+                            <li><code>AClue</code> and <code>AACipherPuzzleActor</code> don't know about each other.
+                                They call into the manager, which broadcasts <code>OnObjectiveUpdated</code> and
+                                <code>OnClueFound</code>.</li>
+                            <li>The notebook widget listens to those delegates, so UI updates are event-driven rather
+                                than polled every tick.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Key code</h3>
+                        <pre><code>void UObjectiveManager::NotifyPuzzleSolved(int32 Index)
+{
+    // Validate the incoming Index, not the current one
+    if (!Objectives.IsValidIndex(Index))
+        return;
+
+    FObjective&amp; Obj = Objectives[Index];
+    if (!Obj.bIsComplete)
+    {
+        Obj.bIsComplete = true;
+        CurrentObjectiveIndex = FMath::Clamp(Index + 1, 0, Objectives.Num() - 1);
+
+        // Broadcast so the notebook pulls in the next NotesBefore/After
+        OnObjectiveUpdated.Broadcast(CurrentObjectiveIndex);
+    }
+}</code></pre>
+                        <p class="code-caption">ObjectiveManager.cpp: advancing the chain and telling the UI.</p>
+                        <h3>Files</h3>
+                        <ul class="file-list">
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/Objective.h" target="_blank" rel="noopener">Objective.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/ObjectiveManager.h" target="_blank" rel="noopener">ObjectiveManager.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/ObjectiveManager.cpp" target="_blank" rel="noopener">ObjectiveManager.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/Clue.h" target="_blank" rel="noopener">Clue.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/Clue.cpp" target="_blank" rel="noopener">Clue.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/ACipherPuzzleActor.h" target="_blank" rel="noopener">ACipherPuzzleActor.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/blob/master/Source/MScProject/ACipherPuzzleActor.cpp" target="_blank" rel="noopener">ACipherPuzzleActor.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/MScProject/tree/master/Source/MScProject" target="_blank" rel="noopener">All source &rarr;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </section>
 
     </main>

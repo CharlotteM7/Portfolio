@@ -22,7 +22,6 @@
             <nav class="site-nav" aria-label="Main">
                 <ul>
                     <li><a href="../index.html#work">Work</a></li>
-                    <li><a href="../code.html">C++ Code</a></li>
                     <li><a href="mailto:charlottecegrant@gmail.com">Email</a></li>
                     <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -48,6 +47,7 @@
             <div class="links">
                 <a class="btn primary" href="https://github.com/CharlotteM7/CI601Project" target="_blank" rel="noopener">Code on GitHub</a>
                 <a class="btn" href="https://drive.google.com/file/d/1sfrMn-lDjhmAu4XOi3RuC-xFOFLyRIid/view?usp=sharing" target="_blank" rel="noopener">Dissertation (PDF)</a>
+                <a class="btn" href="#code">How it's built ↓</a>
             </div>
         </section>
 
@@ -78,9 +78,60 @@
 
 
         <section class="block">
-            <h2>Code and systems</h2>
-            <p class="prose">The generator owns a queue of tiles keyed by grid coordinate. Each tile is generated off the game thread at a detail level set by its distance from the player.</p>
-            <p style="margin-top:0.8rem"><a class="btn" href="../code.html#terrain">Read the system breakdown</a></p>
+            <article class="system" id="code">
+                <h2>Runtime terrain generation and streaming</h2>
+                <p class="sub">How it's built · UE5 C++</p>
+                <div class="two-col">
+                    <div>
+                        <h3>Problem</h3>
+                        <p class="prose">Generate terrain around the player at runtime, far enough to feel open,
+                            without frame spikes when new ground is built.</p>
+                        <h3>Design</h3>
+                        <ul class="bullets">
+                            <li>Height is four octaves of Perlin noise (mountains, land and two detail layers),
+                                with a flat spawn circle that lerps into the noise.</li>
+                            <li>The world is a grid of tiles. <code>QueuedTiles</code> maps each grid coordinate to its
+                                mesh section and LOD level.</li>
+                            <li>Tiles are generated in an <code>FAsyncTask</code> on a background thread. The LOD level
+                                divides the vertex count, so distant tiles are cheap.</li>
+                            <li>As the player moves, <code>RemoveLODQueue</code> swaps outdated tiles for ones at the
+                                right detail level.</li>
+                            <li>Foliage uses instanced static meshes, a seeded <code>FRandomStream</code> and slope
+                                checks, so a saved seed rebuilds the same world.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Key code</h3>
+                        <pre><code>float AWorldGenerator::GetHeight(FVector2D Location)
+{
+    float DistFromCenter = FVector2D::Distance(Location, FVector2D(0, 0));
+
+    if (DistFromCenter &lt;= FlatRadius)
+        return FlatHeight; // Inside the central flat area
+
+    float ProceduralHeight = CalculateProceduralHeight(Location);
+
+    if (DistFromCenter &lt;= TransitionEndRadius)
+    {
+        // Transition zone
+        float TransitionFactor = (DistFromCenter - FlatRadius) / TransitionWidth;
+        return FMath::Lerp(FlatHeight, ProceduralHeight, TransitionFactor);
+    }
+    return ProceduralHeight;
+}</code></pre>
+                        <p class="code-caption">WorldGenerator.cpp: a safe, flat spawn area that blends into the noise.</p>
+                        <h3>Files</h3>
+                        <ul class="file-list">
+                    <li><a href="https://github.com/CharlotteM7/CI601Project/blob/main/WorldGenerator.h" target="_blank" rel="noopener">WorldGenerator.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI601Project/blob/main/WorldGenerator.cpp" target="_blank" rel="noopener">WorldGenerator.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI601Project/blob/main/Spawner.cpp" target="_blank" rel="noopener">Spawner.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI601Project/blob/main/GrassSpawner.cpp" target="_blank" rel="noopener">GrassSpawner.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI601Project/blob/main/MyTerrainSaveGame.h" target="_blank" rel="noopener">MyTerrainSaveGame.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI601Project" target="_blank" rel="noopener">Full repo &rarr;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </section>
 
     </main>

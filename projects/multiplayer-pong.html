@@ -22,7 +22,6 @@
             <nav class="site-nav" aria-label="Main">
                 <ul>
                     <li><a href="../index.html#work">Work</a></li>
-                    <li><a href="../code.html">C++ Code</a></li>
                     <li><a href="mailto:charlottecegrant@gmail.com">Email</a></li>
                     <li><a href="https://github.com/CharlotteM7" target="_blank" rel="noopener">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/charlottecegrant/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -48,6 +47,7 @@
             <div class="links">
                 <a class="btn primary" href="https://github.com/CharlotteM7/CI628-PongClient" target="_blank" rel="noopener">Client code (C++)</a>
                 <a class="btn" href="https://github.com/CharlotteM7/CI628-PongServer" target="_blank" rel="noopener">Server code (Java)</a>
+                <a class="btn" href="#code">How it's built ↓</a>
             </div>
         </section>
 
@@ -70,9 +70,47 @@
 
 
         <section class="block">
-            <h2>Code and systems</h2>
-            <p class="prose">The server owns the game state. The client sends input and parses state messages each frame.</p>
-            <p style="margin-top:0.8rem"><a class="btn" href="../code.html#pong">Read the system breakdown</a></p>
+            <article class="system" id="code">
+                <h2>Networked three-player Pong</h2>
+                <p class="sub">How it's built · C++ / SDL2 client, Java server</p>
+                <div class="two-col">
+                    <div>
+                        <h3>Problem</h3>
+                        <p class="prose">Extend a two-player client and server into a three-player game with a
+                            power-up, keeping the server in charge of game state.</p>
+                        <h3>Design</h3>
+                        <ul class="bullets">
+                            <li>The client only sends input as key up/down messages, one pair per player.</li>
+                            <li>The server simulates the match and sends <code>GAME_DATA</code> and
+                                <code>SCORES</code> messages. The client parses them into a single
+                                <code>GameData</code> struct each frame.</li>
+                            <li>Power-up position and state ride along in <code>GAME_DATA</code>, so every client
+                                sees the same pickup.</li>
+                            <li>Purely visual feedback (particles, sounds, pause menu) stays on the client.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Key code</h3>
+                        <pre><code>if (cmd == &quot;GAME_DATA&quot;) {
+    ...
+    // Check if power-up data is included
+    game_data.powerUpX = std::stoi(args.at(5));
+    game_data.powerUpY = std::stoi(args.at(6));
+    game_data.powerUpActive = std::stoi(args.at(7)) == 1;
+}</code></pre>
+                        <p class="code-caption">MyGame.cpp: reading server state, excerpt.</p>
+                        <h3>Files</h3>
+                        <ul class="file-list">
+                    <li><a href="https://github.com/CharlotteM7/CI628-PongClient/blob/master/src/MyGame.h" target="_blank" rel="noopener">MyGame.h</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI628-PongClient/blob/master/src/MyGame.cpp" target="_blank" rel="noopener">MyGame.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI628-PongClient/blob/master/src/Main.cpp" target="_blank" rel="noopener">Main.cpp</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI628-PongServer/blob/master/src/main/java/com/almasb/fxglgames/pong/PongApp.java" target="_blank" rel="noopener">PongApp.java</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI628-PongServer/blob/master/src/main/java/com/almasb/fxglgames/pong/BallComponent.java" target="_blank" rel="noopener">BallComponent.java</a></li>
+                    <li><a href="https://github.com/CharlotteM7/CI628-PongServer/blob/master/src/main/java/com/almasb/fxglgames/pong/BatComponent.java" target="_blank" rel="noopener">BatComponent.java</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </section>
 
     </main>

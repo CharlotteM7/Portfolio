@@ -1029,3 +1029,8 @@ li code {
 .arcade-caption strong {
   font-weight: 400;
 }
+
+/* Leave room for the sticky header when jumping to a section */
+[id] {
+  scroll-margin-top: 96px;
+}
