@@ -110,7 +110,7 @@ h3 {
 .btn,
 .contact-row a,
 .facts li,
-.exp-list li,
+.exp-list > li,
 .arcade,
 .video,
 .system,
@@ -633,7 +633,7 @@ pre,
   padding: var(--px);
 }
 
-.exp-list li {
+.exp-list > li {
   display: grid;
   grid-template-columns: 9.5rem 1fr;
   gap: 1rem;
@@ -986,7 +986,7 @@ li code {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .exp-list li {
+  .exp-list > li {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.2rem;
   }
@@ -1033,4 +1033,29 @@ li code {
 /* Leave room for the sticky header when jumping to a section */
 [id] {
   scroll-margin-top: 96px;
+}
+
+/* Bullet lists inside experience entries */
+.exp-list .bullets {
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.exp-list .bullets li {
+  margin-bottom: 0.4rem;
+}
+
+.exp-link {
+  margin-top: 0.7rem;
+  font-family: var(--pixel);
+  font-size: 1.45rem;
+}
+
+.exp-link a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.exp-link a:hover {
+  text-decoration: underline;
 }
